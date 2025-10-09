@@ -1,2 +1,2 @@
-# portfoliobysk.github.io
+# S.Kのプロフィール
 私のプロフィールページです。経歴、スキル、資格など。
