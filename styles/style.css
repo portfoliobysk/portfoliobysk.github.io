@@ -1,21 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #000000;
 }
 
 /* Font styles */
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, table, li, a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 1.5rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #222;
     margin-bottom: 1rem;
     letter-spacing: 1px;
 }
@@ -23,7 +21,6 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: bold;
-    color: #222;
     margin-bottom: 0.75rem;
     border-bottom: 2px solid #ccc;
     padding-bottom: 0.25rem;
@@ -32,7 +29,6 @@ h2 {
 h3 {
     font-size: 1.75rem;
     font-weight: bold;
-    color: #222;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
     padding-bottom: 0.25rem;
@@ -41,7 +37,6 @@ h3 {
 h4 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #222;
     margin-bottom: 0.5rem;
 }
 
@@ -62,6 +57,15 @@ a:hover {
 /* List styles */
 ul {
     list-style: inside;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+}
+
+/* Table styles */
+table {
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
 }
