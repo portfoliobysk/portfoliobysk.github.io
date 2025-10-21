@@ -9,13 +9,20 @@ body {
 h1, h2, h3, h4, h5, h6, p, table, li, a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 1rem 0;
-    color: #ffffff;
+    color: #ffffff
+}
+
+header {
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffffff;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
+    color: #1361ba;
 }
 
 h2, h3 {
@@ -79,7 +86,12 @@ th, td {
     text-align: left;
 }
 
+footer {
+    margin: 0;
+    padding: 1rem;
+    background-color: #1361ba;
+}
+
 #footer {
-    background-color: #00aaf0;
-    color: #000000;
+    color: #ffffff;
 }
