@@ -6,8 +6,13 @@ body {
 }
 
 header {
-    margin: 0;
+    width: 100%;
     border-bottom: solid 1px #888888;
+    position: fixed;
+}
+
+main {
+    padding-top: 6rem;
 }
 
 footer {
@@ -30,19 +35,17 @@ small {
 
 /* Font styles */
 h1, h2, h3, h4, h5, h6, p, table, li, a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 1rem;
-    color: #444444;
+    font-family: 'Consolas', sans-serif;
+    color: #555555;
 }
 
 h1 {
     margin: 0;
     padding: 0.5rem;
     font-size: 3rem;
-    letter-spacing: 0.2rem;
     color: #888888;
     background-color: #ffffff;
-    display:inline-block;
 }
 
 h2{
@@ -65,10 +68,12 @@ h4 {
 
 a {
     color: #007acc;
+    text-decoration: underline;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #ff9500;
+    text-decoration: none;
 }
 
 /* List styles */
