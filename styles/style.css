@@ -11,6 +11,10 @@ header {
     position: fixed;
 }
 
+nav {
+    background-color: #ffffff;
+}
+
 main {
     padding-top: 6rem;
 }
