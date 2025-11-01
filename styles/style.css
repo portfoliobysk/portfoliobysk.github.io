@@ -1,4 +1,8 @@
 /* Contents styles */
+:root {
+    scroll-padding: 5rem;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,11 +12,26 @@ body {
 header {
     width: 100%;
     border-bottom: solid 1px #888888;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
 }
 
 main {
     padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 0.5rem;
+    width: 60rem;
+    font-size: 1rem;
+    border: solid 1px #888888;
 }
 
 footer {
@@ -20,17 +39,14 @@ footer {
     padding: 1rem;
     text-align: center;
     border-top: solid 1px #888888;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 small {
     color: #888888;
-}
-
-.contents {
-    margin: 0 1rem;
-    font-size: 1rem;
-    border: solid 1px #888888;
-    border-radius: 0 0 10px 10px;
 }
 
 /* Font styles */
@@ -48,12 +64,9 @@ h1 {
     background-color: #ffffff;
 }
 
-h2{
+h2 {
    margin: 1rem 1rem 0 1rem;
-   padding: 1rem;
    font-size: 2rem;
-   border: solid 1px #888888;
-   border-radius: 10px 10px 0 0;
    font-weight: bold;
 }
 
@@ -66,6 +79,7 @@ h4 {
     font-weight: bold;
 }
 
+/* Link styles */
 a {
     color: #007acc;
     text-decoration: underline;
