@@ -87,7 +87,7 @@ h4 {
 
 /* Link styles */
 a {
-    color: #007acc;
+    color: #555555;
     text-decoration: underline;
 }
 
@@ -98,7 +98,17 @@ a:hover {
 
 /* List styles */
 ul {
-    list-style: inside;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border: solid 1px #888888;
+    border-radius: 1rem;
 }
 
 /* Table styles */
