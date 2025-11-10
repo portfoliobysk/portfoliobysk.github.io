@@ -1,6 +1,7 @@
 /* Contents styles */
 :root {
     scroll-padding: 5rem;
+    font-family: 'Consolas', sans-serif;
 }
 
 body {
@@ -14,14 +15,13 @@ header {
     border-bottom: solid 1px #888888;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
 }
 
 main {
-    margin: 0 0.5rem 0 0.5rem;
-    padding-top: 6rem;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,19 +29,26 @@ main {
 }
 
 section {
-    margin: 0.5rem;
-    /*
+    width: 100%;
+    background-color: #00aaff;
+    display: flex;
+    justify-content: center;
+}
+
+.viewport-content {
+    /* 
      * width を 100% にしておき、max-width で最大幅を指定することで、
      * 画面幅が狭い場合に自動的に縮むようにする。
      */
     width: 100%;
-    max-width: 60rem;
+    max-width: 60vw;
+    min-height: 100vh;
     font-size: 1rem;
-    border: solid 1px #888888;
+    color: #ffffff;
+    text-align: center;
 }
 
 footer {
-    margin: 1rem 0 0 0;
     padding: 1rem;
     text-align: center;
     border-top: solid 1px #888888;
@@ -56,28 +63,22 @@ small {
 }
 
 /* Font styles */
-h1, h2, h3, h4, h5, h6, p, table, li, a {
-    margin: 1rem;
-    font-family: 'Consolas', sans-serif;
-    color: #555555;
-}
-
 h1 {
     margin: 0;
     padding: 0.5rem;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #888888;
     background-color: #ffffff;
 }
 
 h2 {
    margin: 1rem 1rem 0 1rem;
-   font-size: 2rem;
+   font-size: 3rem;
    font-weight: bold;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 
 h4 {
