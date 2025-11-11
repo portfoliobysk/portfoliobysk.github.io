@@ -41,7 +41,7 @@ section {
      * 画面幅が狭い場合に自動的に縮むようにする。
      */
     width: 100%;
-    max-width: 60vw;
+    max-width: 60rem; /* 小さい画面でも意味のある最大幅にするため rem を使用 */
     min-height: 100vh;
     font-size: 1rem;
     color: #ffffff;
@@ -50,6 +50,7 @@ section {
 
 footer {
     padding: 1rem;
+    width: 100%;
     text-align: center;
     border-top: solid 1px #888888;
     background-color: #ffffff;
@@ -101,6 +102,7 @@ a:hover {
 ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 li {
@@ -108,17 +110,19 @@ li {
     padding: 1rem;
     width: 10rem;
     height: 10rem;
-    border: solid 1px #888888;
+    color: #00aaff;
+    background-color: #ffffff;
     border-radius: 1rem;
 }
 
 /* Table styles */
 table {
-    margin-bottom: 1.5rem;
+    margin: 1rem;
 }
 
 th, td {
     border: 1px solid #ccc;
     padding: 0.75rem;
     text-align: left;
+    word-break:break-word
 }
