@@ -1,27 +1,28 @@
+@charset "UTF-8";
 /* Contents styles */
 :root {
     scroll-padding: 5rem;
+    font-family: 'Century Gothic', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: deepskyblue;
 }
 
 header {
     width: 100%;
-    border-bottom: solid 1px #888888;
-    background-color: #ffffff;
+    background-color: deepskyblue;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
 }
 
 main {
-    margin: 0 0.5rem 0 0.5rem;
-    padding-top: 6rem;
+    padding-top: 5rem;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,70 +30,89 @@ main {
 }
 
 section {
-    margin: 0.5rem;
-    /*
+    /* 
      * width を 100% にしておき、max-width で最大幅を指定することで、
      * 画面幅が狭い場合に自動的に縮むようにする。
      */
     width: 100%;
     max-width: 60rem;
+    min-height: 100vh;
     font-size: 1rem;
-    border: solid 1px #888888;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.back_skyblue {
+    max-width: 100%;
+    color: white;
+    background-color: deepskyblue;
+}
+
+section.back_white {
+    color: black;
+    background-color: white;
 }
 
 footer {
-    margin: 1rem 0 0 0;
     padding: 1rem;
+    width: 100%;
     text-align: center;
-    border-top: solid 1px #888888;
-    background-color: #ffffff;
+    background-color: olivedrab;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 small {
-    color: #888888;
+    color: white;
 }
 
 /* Font styles */
-h1, h2, h3, h4, h5, h6, p, table, li, a {
-    margin: 1rem;
-    font-family: 'Consolas', sans-serif;
-    color: #555555;
-}
-
 h1 {
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 3rem;
-    color: #888888;
-    background-color: #ffffff;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 6vw;
+    font-weight: bold;
+    color: olivedrab;
+    background-color: white;
 }
 
 h2 {
-   margin: 1rem 1rem 0 1rem;
-   font-size: 2rem;
+   margin: 1rem 1rem 0.5rem 1rem;
+   font-size: 4rem;
    font-weight: bold;
+   color: deepskyblue;
+}
+
+h2.slogan {
+    font-size: 9rem;
+    color: white;
 }
 
 h3 {
-    font-size: 1.75rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-size: 3rem;
+    color: deepskyblue;
 }
 
 h4 {
-    font-size: 1.5rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-size: 2rem;
     font-weight: bold;
+    color: deepskyblue;
 }
 
 /* Link styles */
 a {
-    color: #555555;
+    color: black;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #ff9500;
+    color: saddlebrown;
     text-decoration: none;
 }
 
@@ -100,6 +120,7 @@ a:hover {
 ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 li {
@@ -107,17 +128,50 @@ li {
     padding: 1rem;
     width: 10rem;
     height: 10rem;
-    border: solid 1px #888888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 5px solid black;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+li.html_css {
+    color: white;
+    background-color: MediumSeaGreen;
+    border: 5px solid darkgreen
+}
+
+li.js {
+    color: white;
+    background-color: royalblue;
+    border: 5px solid darkblue
+}
+
+li.php {
+    color: white;
+    background-color: purple;
+    border: 5px solid indigo;
+}
+
+li.sql {
+    color: white;
+    background-color: SteelBlue;
+    border: 5px solid orange;
+}
+
 
 /* Table styles */
 table {
-    margin-bottom: 1.5rem;
+    margin: 1rem;
 }
 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 0.75rem;
     text-align: left;
+    word-break: break-word;
 }
