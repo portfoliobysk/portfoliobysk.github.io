@@ -14,7 +14,7 @@ body {
 header {
     padding: 0 2vw;
     width: 100%;
-    background-color: deepskyblue;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,8 +147,9 @@ a:hover {
     text-decoration: none;
 }
 
-nav a {
+footer a {
     color: white;
+    font-weight: bold;
     text-decoration: underline;
 }   
 
