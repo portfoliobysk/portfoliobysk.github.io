@@ -46,7 +46,7 @@ section {
     padding: 0 1rem;
 }
 
-section.title_back {
+section.title__back {
     max-width: 100%;
     color: white;
     background: linear-gradient(deepskyblue, green);
@@ -54,7 +54,7 @@ section.title_back {
     align-items: center;
 }
 
-section.back_white {
+section.back__white {
     color: dimgray;
     background-color: white;
 }
@@ -82,9 +82,8 @@ section.portfolio div {
 }
 
 footer {
-    padding: 1rem;
+    padding: 1vw;
     width: 100%;
-    text-align: center;
     background-color: saddlebrown;
     display: flex;
     justify-content: space-around;
@@ -102,8 +101,8 @@ h1 {
     padding: 1rem;
     font-size: 6vw;
     font-weight: bold;
-    color: deepskyblue;
-    background-color: white;
+    color: white;
+    background-color: deepskyblue;
 }
 
 h2 {
@@ -151,7 +150,13 @@ footer a {
     color: white;
     font-weight: bold;
     text-decoration: underline;
-}   
+} 
+
+footer a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+} 
 
 /* List styles */
 ul {
@@ -177,7 +182,12 @@ li {
     align-items: center;
 }
 
-li.html_css {
+li:hover {
+    transform: scale(1.1);
+    transition: all .5s ease-out 0.1s;
+}
+
+li.html__css {
     color: white;
     background-color: MediumSeaGreen;
     border: 5px solid darkgreen;
@@ -189,12 +199,6 @@ li.js {
     border: 5px solid darkblue;
 }
 
-li.php {
-    color: white;
-    background-color: purple;
-    border: 5px solid indigo;
-}
-
 li.sql {
     color: white;
     background-color: SteelBlue;
@@ -204,7 +208,6 @@ li.sql {
 section.portfolio li{
     box-shadow: 1rem 1rem 0.5rem darkgreen;
 }
-
 
 /* Table styles */
 table {
