@@ -24,10 +24,9 @@ header {
 main {
     padding-top: 10rem;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 75% 25%;
+
 }
 
 section {
@@ -37,7 +36,6 @@ section {
      */
     width: 100%;
     max-width: 60rem;
-    min-height: 100vh;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
@@ -45,47 +43,13 @@ section {
     padding: 0 1rem;
 }
 
-section.title__back {
-    max-width: 100%;
-    color: white;
-    background: linear-gradient(deepskyblue, green);
-    justify-content: center;
-    align-items: center;
+.content__block {
+  grid-column: 1 / 2; 
 }
 
-section.about__back {
-    color: dimgray;
-    background-color: white;
-}
-
-section.profile__back {
-    max-width: 100%;
-    margin-bottom: 0;
-    color: black;
-    background-color: lightgray;
-    justify-content: center;
-    align-items: center;
-}
-
-section.portfolio {
-    max-width: 100%;
-    margin-bottom: 0;
-    color: white;
-    background-color: forestgreen;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section.portfolio div#portfolio {
-    width: 100%;
-    max-width: 60rem;
-    min-height: 100vh;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 1rem;
+.sidebar__right {
+  grid-column: 2 / 3;
+  border-left: 1px solid darkgreen;
 }
 
 footer {
@@ -100,6 +64,14 @@ footer {
 small {
     font-size: 1rem;
     color: white;
+}
+
+pre {
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    font-family: Consolas, sans-serif;
+    border-radius: 1rem;
 }
 
 /* Tablet Contents Style */
@@ -130,15 +102,6 @@ h2 {
    margin: 1rem 0.5rem 0.5rem 0;
    font-size: 4rem;
    color: dimgray;
-}
-
-h2.slogan {
-    font-size: 6rem;
-    color: white;
-}
-
-section.portfolio h2 {
-    color: white;
 }
 
 h3 {
@@ -200,53 +163,13 @@ footer a:hover {
 
 /* List styles */
 ul {
-    display: flex;
-    flex-wrap: wrap;
-    overflow-y: auto;
-}
-
-li {
-    margin: 1rem;
+    list-style: square;
     padding: 1rem;
-    width: 10rem;
-    height: 10rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: dimgray;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 1rem;
-    box-shadow: 1rem 1rem 0.5rem lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-li:hover {
-    transform: scale(1.1);
-    transition: all .5s ease-out 0.1s;
-}
-
-li.html__css {
-    color: white;
-    background-color: MediumSeaGreen;
-    border: 5px solid darkgreen;
-}
-
-li.js {
-    color: white;
-    background-color: royalblue;
-    border: 5px solid darkblue;
-}
-
-li.sql {
-    color: white;
-    background-color: SteelBlue;
-    border: 5px solid orange;
-}
-
-section.portfolio li{
-    box-shadow: 1rem 1rem 0.5rem darkgreen;
+ol {
+    list-style-type: decimal;
+    padding: 1rem;
 }
 
 /* Table styles */
