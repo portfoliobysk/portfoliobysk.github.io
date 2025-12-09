@@ -120,10 +120,6 @@ small {
 h1 {
     margin: 1rem;
     padding: 1rem;
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    background-color: deepskyblue;
 }
 
 h2 {

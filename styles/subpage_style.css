@@ -8,6 +8,13 @@
 body {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main   aside"
+        "footer footer";
 }
 
 header {
@@ -16,6 +23,7 @@ header {
     background-color: white;
     box-shadow: 0 0 1rem 0 gray;
     display: flex;
+    grid-area: header;
     justify-content: space-around;
     align-items: center;
     position: fixed;
@@ -24,9 +32,8 @@ header {
 main {
     padding-top: 10rem;
     background-color: white;
-    display: grid;
-    grid-template-columns: 75% 25%;
-
+    grid-area: main;
+    counter-reset: section-counter;
 }
 
 section {
@@ -43,13 +50,11 @@ section {
     padding: 0 1rem;
 }
 
-.content__block {
-  grid-column: 1 / 2; 
-}
-
-.sidebar__right {
-  grid-column: 2 / 3;
-  border-left: 1px solid darkgreen;
+aside {
+    padding: 10rem 1rem 1rem 1rem;
+    width: 100%;
+    grid-area: aside;
+    background-color: lightgrey;
 }
 
 footer {
@@ -57,6 +62,7 @@ footer {
     width: 100%;
     background-color: peru;
     display: flex;
+    grid-area: footer;
     justify-content: space-around;
     align-items: center;
 }
@@ -92,16 +98,17 @@ pre {
 h1 {
     margin: 1rem;
     padding: 1rem;
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    background-color: deepskyblue;
 }
 
 h2 {
    margin: 1rem 0.5rem 0.5rem 0;
    font-size: 4rem;
    color: dimgray;
+   counter-increment: section-counter;
+}
+
+h2::before {
+    content: counter(section-counter) ". "
 }
 
 h3 {
@@ -114,22 +121,6 @@ h4 {
     margin: 2rem 0;
     font-size: 2rem;
     color: dimgrey;
-}
-
-/* Tablet Font styles */
-@media screen and (max-width:1280px) {
-    h2.slogan {
-        font-size: 4rem;
-        color: white;
-    }
-}
-
-/* SmartPhone Font styles */
-@media screen and (max-width:500px) {
-    h2.slogan {
-        font-size: 2.5rem;
-        color: white;
-    }
 }
 
 /* Link styles */
@@ -164,12 +155,12 @@ footer a:hover {
 /* List styles */
 ul {
     list-style: square;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 ol {
     list-style-type: decimal;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* Table styles */

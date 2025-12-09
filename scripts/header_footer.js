@@ -1,5 +1,5 @@
 const headerContent = `
-    <h1>S.K's Portfolio</h1>
+    <h1><img src="../../images/logo.svg" alt="S.K's Portfolio Logo"></h1>
     <nav>
       <a href="#About" class="anchor">About</a>
       <a href="#Profile" class="anchor">Profile</a>

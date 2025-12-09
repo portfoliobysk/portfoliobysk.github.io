@@ -1,0 +1,14 @@
+<svg width="350" height="60" viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+  <text 
+    x="175" 
+    y="35" 
+    font-family="Consolas, 'Courier New', monospace" 
+    font-size="36" 
+    font-weight="bold"
+    fill="#00bfff" 
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    S.K's Portfolio
+  </text>
+</svg>
