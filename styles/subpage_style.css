@@ -9,11 +9,12 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 250px;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "header header"
-        "main   aside"
+        "breadcrumb breadcrumb"
+        "aside   main"
         "footer footer";
 }
 
@@ -29,8 +30,17 @@ header {
     position: fixed;
 }
 
+nav#breadcrumb {
+    width: 100%;
+    padding-top: 8rem;
+    color: white;
+    background-color: forestgreen;
+    display: flex;
+    justify-content: left;
+    grid-area: breadcrumb;
+}
+
 main {
-    padding-top: 10rem;
     background-color: white;
     grid-area: main;
     counter-reset: section-counter;
@@ -42,8 +52,8 @@ section {
      * 画面幅が狭い場合に自動的に縮むようにする。
      */
     width: 100%;
-    max-width: 60rem;
-    font-size: 1rem;
+    max-width: 100%;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -51,8 +61,9 @@ section {
 }
 
 aside {
-    padding: 10rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     width: 100%;
+    height: 50vh;
     grid-area: aside;
     background-color: lightgrey;
 }
@@ -82,15 +93,20 @@ pre {
 
 /* Tablet Contents Style */
 @media screen and (max-width:1280px) {
-    main {
-        padding-top: 8rem;
-    }
+
 }
 
 /* SmartPhone Contents styles */
 @media screen and (max-width:500px) {
-    main {
-        padding-top: 7rem;
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "breadcrumb"
+        "footer";
     }
 }
 
@@ -101,7 +117,7 @@ h1 {
 }
 
 h2 {
-   margin: 1rem 0.5rem 0.5rem 0;
+   margin: 1rem 0.5rem 1rem 0;
    font-size: 4rem;
    color: dimgray;
    counter-increment: section-counter;
@@ -126,8 +142,12 @@ h4 {
 /* Link styles */
 a {
     color: black;
-    font-weight: bold;
     text-decoration: underline;
+}
+
+a:hover {
+    color: saddlebrown;
+    text-decoration: none;
 }
 
 header a:hover {
@@ -135,9 +155,14 @@ header a:hover {
     text-decoration: none;
 }
 
-a:hover {
-    color: saddlebrown;
+nav#breadcrumb a {
+    color: white;
+    font-weight: normal;
     text-decoration: none;
+}
+
+nav#breadcrumb a:hover {
+    text-decoration: underline;
 }
 
 footer a {
@@ -163,6 +188,13 @@ ol {
     padding: 2rem;
 }
 
+nav#breadcrumb ol li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
 /* Table styles */
 table {
     margin: 0.5rem 0;
@@ -178,4 +210,16 @@ th, td {
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+}
+
+/* Image styles */
+img[src$=".svg"] {
+    transform: scale(1.5);
+}
+
+/* SmartPhone Image styles */
+@media screen and (max-width:500px) {
+    img[src$=".svg"] {
+        transform: scale(1.2);
+    }
 }
