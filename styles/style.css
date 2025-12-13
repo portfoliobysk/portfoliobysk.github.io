@@ -1,14 +1,13 @@
 @charset "UTF-8";
 /* Contents styles */
 :root {
-    scroll-padding: 10rem;
+    scroll-padding: 5rem;
     font-family: 'Century Gothic', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: deepskyblue;
 }
 
 header {
@@ -39,7 +38,6 @@ section {
     width: 100%;
     max-width: 60rem;
     min-height: 100vh;
-    margin-bottom: 5rem;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
@@ -51,28 +49,35 @@ section.title__back {
     max-width: 100%;
     color: white;
     background: linear-gradient(deepskyblue, green);
-    box-shadow: inset 0 1rem 0 0 darkgreen;
     justify-content: center;
     align-items: center;
 }
 
-section.back__white {
+section.about__back {
     color: dimgray;
     background-color: white;
+}
+
+section.profile__back {
+    max-width: 100%;
+    margin-bottom: 0;
+    color: black;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
 }
 
 section.portfolio {
     max-width: 100%;
     margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
     background-color: forestgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section.portfolio div {
+section.portfolio div#portfolio {
     width: 100%;
     max-width: 60rem;
     min-height: 100vh;
@@ -97,25 +102,52 @@ small {
     color: white;
 }
 
+/* Tablet Contents Style */
+@media screen and (max-width:1280px) {
+    main {
+        padding-top: 8rem;
+    }
+
+    li:hover{
+        pointer-events: none;
+    }
+
+    ul {
+        display: flex;
+        overflow-y: scroll;
+    }
+}
+
+/* SmartPhone Contents styles */
+@media screen and (max-width:500px) {
+    main {
+        padding-top: 7rem;
+    }
+
+    li:hover{
+        pointer-events: none;
+    }
+
+    ul {
+        display: flex;
+        overflow-y: scroll;
+    }
+}
+
 /* Font styles */
 h1 {
     margin: 1rem;
     padding: 1rem;
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    background-color: deepskyblue;
 }
 
 h2 {
    margin: 1rem 0.5rem 0.5rem 0;
    font-size: 4rem;
-   font-weight: bold;
    color: dimgray;
 }
 
 h2.slogan {
-    font-size: 8rem;
+    font-size: 6rem;
     color: white;
 }
 
@@ -132,8 +164,23 @@ h3 {
 h4 {
     margin: 2rem 0;
     font-size: 2rem;
-    font-weight: bold;
     color: dimgrey;
+}
+
+/* Tablet Font styles */
+@media screen and (max-width:1280px) {
+    h2.slogan {
+        font-size: 4rem;
+        color: white;
+    }
+}
+
+/* SmartPhone Font styles */
+@media screen and (max-width:500px) {
+    h2.slogan {
+        font-size: 2.5rem;
+        color: white;
+    }
 }
 
 /* Link styles */

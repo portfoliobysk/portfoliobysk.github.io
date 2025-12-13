@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* Contents styles */
+:root {
+    scroll-padding: 10rem;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "breadcrumb breadcrumb"
+        "aside   main"
+        "footer footer";
+}
+
+header {
+    padding: 0 2vw;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 1rem 0 gray;
+    display: flex;
+    grid-area: header;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+}
+
+nav#breadcrumb {
+    width: 100%;
+    padding-top: 8rem;
+    color: white;
+    background-color: forestgreen;
+    display: flex;
+    justify-content: left;
+    grid-area: breadcrumb;
+}
+
+main {
+    background-color: white;
+    grid-area: main;
+    counter-reset: section-counter;
+}
+
+section {
+    /* 
+     * width を 100% にしておき、max-width で最大幅を指定することで、
+     * 画面幅が狭い場合に自動的に縮むようにする。
+     */
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+aside {
+    padding: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 50vh;
+    grid-area: aside;
+    background-color: lightgrey;
+}
+
+footer {
+    padding: 1vw;
+    width: 100%;
+    background-color: peru;
+    display: flex;
+    grid-area: footer;
+    justify-content: space-around;
+    align-items: center;
+}
+
+small {
+    font-size: 1rem;
+    color: white;
+}
+
+pre {
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    font-family: Consolas, sans-serif;
+    border-radius: 1rem;
+}
+
+/* Tablet Contents Style */
+@media screen and (max-width:1280px) {
+
+}
+
+/* SmartPhone Contents styles */
+@media screen and (max-width:500px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "breadcrumb"
+        "footer";
+    }
+}
+
+/* Font styles */
+h1 {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+h2 {
+   margin: 1rem 0.5rem 1rem 0;
+   font-size: 4rem;
+   color: dimgray;
+   counter-increment: section-counter;
+}
+
+h2::before {
+    content: counter(section-counter) ". "
+}
+
+h3 {
+    margin: 2rem 0;
+    font-size: 3rem;
+    color: dimgray;
+}
+
+h4 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: dimgrey;
+}
+
+/* Link styles */
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: saddlebrown;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+nav#breadcrumb a {
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+nav#breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+} 
+
+footer a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+} 
+
+/* List styles */
+ul {
+    list-style: square;
+    padding: 2rem;
+}
+
+ol {
+    list-style-type: decimal;
+    padding: 2rem;
+}
+
+nav#breadcrumb ol li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+/* Table styles */
+table {
+    margin: 0.5rem 0;
+    width: calc(100% - 1rem);
+    table-layout: fixed;
+    overflow-wrap: break-word;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.75rem;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Image styles */
+img[src$=".svg"] {
+    transform: scale(1.5);
+}
+
+/* SmartPhone Image styles */
+@media screen and (max-width:500px) {
+    img[src$=".svg"] {
+        transform: scale(1.2);
+    }
+}
