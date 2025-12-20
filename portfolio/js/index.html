@@ -10,7 +10,7 @@
     <meta name="description" content="S.KによるJavaScriptの学習用ページです。" />
     <meta name="viewport" content="width=device-width" />
     <link href="../../styles/destyle.css" rel="stylesheet">
-    <link href="../../styles/style.css" rel="stylesheet">
+    <link href="../../styles/subpage_style.css" rel="stylesheet">
 
     <title>JavaScript道場 - S.K's Portfolio</title>
 
@@ -23,14 +23,39 @@
 
     <header></header>
 
+    <nav id="breadcrumb"></nav>
+
     <main>
-        <section>
+
+        <section class="content__block">
             <h2>JavaScript道場</h2>
             <p>JavaScriptの学習用ページです。</p>
-            <input type="button" value="PUSH">
-            <p></p>
         </section>
+
+        <section class="content__block">
+            <h3 id="#1">Gemini APIの実験</h3>
+            <p>以下のフォームに入力して「実行」ボタンを押すと、Gemini APIを使ってレシピを生成します。</p>
+            <label for="mainIngredient">メイン食材:</label>
+            <input type="text" id="mainIngredient" value="鶏むね肉">
+
+            <label for="cookingTime">調理時間（分）:</label>
+            <input type="number" id="cookingTime" value="15">
+
+            <input type="button" id="executeButton" value="実行">
+
+            <p id="recipeOutput"></p>
+
+        </section>
+
     </main>
+
+    <aside>
+        <nav>
+            <ol>
+                <li><a href="#1">Gemini APIの実験</a></li>
+            </ol>
+        </nav>
+    </aside>
 
     <footer></footer>
 

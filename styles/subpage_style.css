@@ -32,7 +32,7 @@ header {
 
 nav#breadcrumb {
     width: 100%;
-    padding-top: 8rem;
+    padding: 8rem 0 0 0;
     color: white;
     background-color: forestgreen;
     display: flex;
@@ -185,7 +185,7 @@ ul {
 
 ol {
     list-style-type: decimal;
-    padding: 2rem;
+    padding: 0.5rem;
 }
 
 nav#breadcrumb ol li {
@@ -214,12 +214,44 @@ th, td {
 
 /* Image styles */
 img[src$=".svg"] {
-    transform: scale(1.5);
+    transform: scale(1.8);
+}
+
+/* Tablet Image Style */
+@media screen and (max-width:1280px) {
+    img[src$=".svg"] {
+        transform: scale(1.5);
+    }
 }
 
 /* SmartPhone Image styles */
 @media screen and (max-width:500px) {
     img[src$=".svg"] {
-        transform: scale(1.2);
+        transform: scale(1);
     }
+}
+
+/* Input styles */
+input[type="text"],input[type="number"] {
+    max-width: 20rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+}
+
+input[type="button"] {
+    max-width: 5rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: dodgerblue;
 }
