@@ -1,10 +1,5 @@
 @charset "UTF-8";
 /* Contents styles */
-:root {
-    scroll-padding: 10rem;
-    font-family: 'Century Gothic', sans-serif;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -19,15 +14,7 @@ body {
 }
 
 header {
-    padding: 0 2vw;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 0 1rem 0 gray;
-    display: flex;
-    grid-area: header;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
+  grid-area: header;
 }
 
 nav#breadcrumb {
@@ -46,20 +33,6 @@ main {
     counter-reset: section-counter;
 }
 
-section {
-    /* 
-     * width を 100% にしておき、max-width で最大幅を指定することで、
-     * 画面幅が狭い場合に自動的に縮むようにする。
-     */
-    width: 100%;
-    max-width: 100%;
-    font-size: 1.1rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-}
-
 aside {
     padding: 1rem 1rem 1rem 1rem;
     width: 100%;
@@ -69,18 +42,7 @@ aside {
 }
 
 footer {
-    padding: 1vw;
-    width: 100%;
-    background-color: peru;
-    display: flex;
-    grid-area: footer;
-    justify-content: space-around;
-    align-items: center;
-}
-
-small {
-    font-size: 1rem;
-    color: white;
+  grid-area: footer;
 }
 
 pre {
@@ -111,11 +73,6 @@ pre {
 }
 
 /* Font styles */
-h1 {
-    margin: 1rem;
-    padding: 1rem;
-}
-
 h2 {
    margin: 1rem 0.5rem 1rem 0;
    font-size: 4rem;
@@ -139,54 +96,26 @@ h4 {
     color: dimgrey;
 }
 
-/* Link styles */
-a {
-    color: black;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: saddlebrown;
-    text-decoration: none;
-}
-
-header a:hover {
-    color: deepskyblue;
-    text-decoration: none;
-}
-
-nav#breadcrumb a {
-    color: white;
-    font-weight: normal;
-    text-decoration: none;
-}
-
-nav#breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-footer a {
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-} 
-
-footer a:hover {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-} 
-
 /* List styles */
 ul {
     list-style: square;
     padding: 2rem;
 }
-
 ol {
     list-style-type: decimal;
     padding: 0.5rem;
 }
+li {
+  width: auto;
+  height: auto;
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: initial;
+}   
 
 nav#breadcrumb ol li {
     padding: 0;
