@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* footer styles */
+footer {
+    padding: 3rem 0;
+    width: 100%;
+    background-color: dimgray;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+}
+div#footer__nav {
+  padding: 0 0 0 2rem;
+  border-left: 1px solid white;
+  display: grid;
+}
+
+small {
+    padding: 0 2rem 0 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* footer link styles */
+footer a {
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+} 
+footer a:hover {
+    color: dimgray;
+    background-color: white;
+    font-weight: bold;
+}

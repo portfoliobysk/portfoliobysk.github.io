@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* hero Section styles */
+section.hero__section {
+    max-width: 100%;
+    min-height: 600px;
+    color: white;
+    background: linear-gradient(deepskyblue, green);
+    border-radius: 0 0 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+div.hero__section {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "slogan   img"
+        "explain  img";
+}
+h2.slogan {
+    margin: 0 0 2rem 0;
+    font-size: 6rem;
+    color: white;
+    text-align: left;
+    grid-area: slogan;
+    line-height: 1;
+}
+span.slogan__top {
+    font-size: 6rem;
+    font-weight: bold;
+}
+span.slogan__sub {
+    font-size: 3rem;
+}
+p.slogan__explain {
+    grid-area: explain;
+}
+img.slogan__img {
+    width: 400px;
+    height: 300px;
+    grid-area: img;
+}
+
+/* profile Section styles */
+section.profile__back {
+    max-width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.profile__back div#profile {
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* skills Section styles */
+li.html {
+    color: white;
+    background-color: MediumSeaGreen;
+}
+li.css {
+    color: white;
+    background-color: Indigo;
+}
+li.js {
+    background-color: yellow;
+}
+li.ts {
+    color: white;
+    background-color: DodgerBlue;
+}
+li.sql {
+    color: white;
+    background-color: darkred;
+}
+
+li.react {
+    background-color: DeepSkyBlue;
+}
+
+/* portfolio Section styles */
+section.portfolio {
+    max-width: 90%;
+    background-color: LightBlue;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.portfolio dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+section.portfolio dt {
+  margin: 2rem;
+  font-weight: bold;
+}
+section.portfolio dd {
+  margin: 2rem;
+}
+
+/* Tablet Contents Style */
+@media screen and (max-width:1280px) {
+    main {
+        padding-top: 8rem;
+    }
+}
+
+/* SmartPhone Contents styles */
+@media screen and (max-width:500px) {
+    main {
+        padding-top: 7rem;
+    }
+}
+
+/* Career Section styles */
+section.career {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.career dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+section.career dt {
+  margin: 2rem;
+  font-weight: bold;
+}
+section.career dd {
+  margin: 2rem;
+}
+
+/* Tablet Font styles */
+@media screen and (max-width:1280px) {
+    h2.slogan {
+        font-size: 4rem;
+        color: white;
+    }
+}
+
+/* SmartPhone Font styles */
+@media screen and (max-width:500px) {
+    h2.slogan {
+        font-size: 2.5rem;
+        color: white;
+    }
+}
+
+/* Tablet Contents Style */
+@media screen and (max-width:1280px) {
+    li:hover{
+        pointer-events: none;
+    }
+}
+
+/* SmartPhone Contents styles */
+@media screen and (max-width:500px) {
+    li:hover{
+        pointer-events: none;
+    }
+}
