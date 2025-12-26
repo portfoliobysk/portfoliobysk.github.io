@@ -1,3 +1,7 @@
-*.css linguist-detectable=true
-*.html linguist-detectable=true
-*.js linguist-detectable=true
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+
+// .mdはドキュメントとして統計情報から除外
+*.md linguist-documentation

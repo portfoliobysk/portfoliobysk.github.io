@@ -37,13 +37,17 @@ const breadcrumbContent = () => {
 }
 
 const footerContent = `
-  <img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo">
-  <small>&#169; 2025 S.K</small>
-  <div id="footer__nav">
+  <div id="footer__copy">
+    <img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo">
+    <small>&#169; 2025 S.K</small>
+  </div>
+  <div id="footer__nav__contents">
     <a href="#profile__link">Profile</a>
     <a href="#skills__link">Skill's</a>
     <a href="#portfolio__link">Portfolio</a>
     <a href="#career__link">Career</a>
+  </div>
+  <div id="footer__nav__links">
     <a href="https://github.com/portfoliobysk/">GitHub</a>
     <a href="https://forms.gle/CALFLhAjRGj49LZC6">Contact</a>
   </div>

@@ -14,8 +14,8 @@ body {
 }
 
 main {
-    background-color: white;
     grid-area: main;
+    background-color: white;
     counter-reset: section-counter;
 }
 
@@ -24,10 +24,10 @@ section {
 }
 
 aside {
-    padding: 1rem;
-    width: 100%;
-    border-right: 1px solid gray;
-    grid-area: aside;
+  grid-area: aside;
+  padding: 1rem;
+  width: 100%;
+  border-right: 1px solid gray;
 }
 
 pre {
