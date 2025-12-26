@@ -1,10 +1,12 @@
 const headerContent = `
-    <h1><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></h1>
+  <h1><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></h1>
     <nav>
-      <a href="#About" class="anchor">About</a>
-      <a href="#Profile" class="anchor">Profile</a>
-      <a href="#Portfolio" class="anchor">Portfolio</a>
+      <a href="#profile__link">Profile</a>
+      <a href="#skills__link">Skill's</a>
+      <a href="#portfolio__link">Portfolio</a>
+      <a href="#career__link">Career</a>
       <a href="https://github.com/portfoliobysk/">GitHub</a>
+      <a href="https://forms.gle/CALFLhAjRGj49LZC6">Contact</a>
     </nav>
 `;
 
@@ -35,13 +37,20 @@ const breadcrumbContent = () => {
 }
 
 const footerContent = `
+  <div id="footer__copy">
+    <img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo">
     <small>&#169; 2025 S.K</small>
-    <div id="footer__nav">
-        <a href="#About">About</a>
-        <a href="#Profile">Profile</a>
-        <a href="#Portfolio">Portfolio</a>
-        <a href="https://github.com/portfoliobysk/">GitHub</a>
-    </div>
+  </div>
+  <div id="footer__nav__contents">
+    <a href="#profile__link">Profile</a>
+    <a href="#skills__link">Skill's</a>
+    <a href="#portfolio__link">Portfolio</a>
+    <a href="#career__link">Career</a>
+  </div>
+  <div id="footer__nav__links">
+    <a href="https://github.com/portfoliobysk/">GitHub</a>
+    <a href="https://forms.gle/CALFLhAjRGj49LZC6">Contact</a>
+  </div>
 `;
 
 // ページロード後に実行

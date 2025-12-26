@@ -8,8 +8,12 @@
   <!-- デザイン関連 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles/destyle.css" rel="stylesheet">
-  <link href="styles/style.css" rel="stylesheet">
+  <link href="styles/base/destyle.css" rel="stylesheet">
+  <link href="styles/base/base.css" rel="stylesheet">
+  <link href="styles/layout/header.css" rel="stylesheet">   
+  <link href="styles/layout/footer.css" rel="stylesheet">
+  <link href="styles/components/card.css" rel="stylesheet">
+  <link href="styles/pages/top.css" rel="stylesheet">
 
   <title>S.K's Portfolio</title>
   
@@ -23,33 +27,43 @@
 
   <main>
 
-    <section class="title__back">
-      <h2 class="slogan">コードの稜線に、<br>未来の景色を描く</h2>
+    <section class="hero__section">
+      <h2 class="slogan">
+        <span class="slogan__top">Build the Web</span><br>
+        <span class="slogan__sub">with meaning.</span>
+      </h2>
+      <p class="slogan__explain">
+        ようこそ、S.K's Portfolioへ！<br>
+        このサイトでは私の
+        <br><strong>プロフィール、スキルセット、ポートフォリオ、キャリア</strong><br>
+        の紹介をしています。どうぞごゆっくりご覧ください。
+      </p>
+      <img class="slogan__img" src="images/mountain.svg" alt="mountain image">
     </section>
 
-    <section class="about__back">
-      <h2 id="About">About</h2>
-        <p>
-          ようこそ、S.K's Portfolioへ！<br>
-          このサイトでは主に、フロントエンドエンジニアを目指している私、<strong>S.Kの紹介（経歴、スキル、学習中の内容）並びにポートフォリオ</strong>を公開しております。
-        </p>
-    </section> 
-
-    <section class="profile__back">
-      <div id="profile">
-        <h2 id="Profile">Profile</h2>
-        <h3>自己紹介</h3>
-        <p>
-          改めましてS.Kと申します。大学の理工系学科卒業後、システムエンジニアとして6年間従事して参りました。主に業務系のシステムを担当し、運用及び一部開発を経験しました。特にデータベース周りの知識を深めることができました。現在はフロントエンドエンジニアを目指し、HTML、CSS、JavaScriptを中心に学習しております。また、設計にも携われるエンジニアを目指しておりUIやUX、ツール（Figma）について日々勉強しています。生成AIにも興味があり、駆使できる人材を目指しております。<br>皆様どうぞ、よろしくお願いいたします。
-        </p>
+    <section class="profile__section">
+      <h2 id="profile__link">Profile</h2>
+        <div id="profile__layput">
+          <div id="profile__img">※サムネイル予定地</div>
+          <h3>S.K</h3>
+          <p>
+            大学の理工系学科卒業後、システムエンジニアとして6年間従事して参りました。主に業務系のシステムを担当し、運用及び一部開発を経験しました。特にデータベース周りの知識を深めることができました。現在はフロントエンドエンジニアを目指し、HTML、CSS、JavaScriptを中心に学習しております。また、設計にも携われるエンジニアを目指しておりUIやUX、ツール（Figma）について日々勉強しています。生成AIにも興味があり、駆使できる人材を目指しております。<br>皆様どうぞ、よろしくお願いいたします。
+          </p>
+        </div>
         
-        <h3>Skill's</h3>
+      <section id="skills__secton">
+        <h3 id="skills__link">Skill's</h3>
         <h4>使用言語</h4>
+          <ul class="card">
+            <li class="html card">HTML</li>
+            <li class="css card">CSS</li>
+            <li class="js card">JavaScript</li>
+            <li class="ts card">TypeScript</li>
+            <li class="sql card">SQL<br>PL/SQL</li>
+          </ul>
+        <h4>使用フレームワーク</h4>
           <ul>
-            <li class="html"><img src="images/html.svg" alt="HTML"></li>
-            <li class="css"><img src="images/css.svg" alt="CSS"></li>
-            <li class="js"><img src="images/javascript.svg" alt="JavaScript"></li>
-            <li class="sql">SQL<br>PL/SQL</li>
+            <li class="react card">React</li>
           </ul>
 
         <h4>開発環境</h4>
@@ -71,6 +85,10 @@
                 <td>Visual Studio Code</td>
               </tr>
               <tr>
+                <td>デザインツール</td>
+                <td>Figma</td>
+              </tr>
+              <tr>
                 <td>ブラウザ</td>
                 <td>Google Chrome、FireFox</td>
               </tr>
@@ -83,19 +101,22 @@
                 <td>Git、GitHub</td>
               </tr>
               <tr>
+                <td>プロジェクト管理</td>
+                <td>GitHub Project</td>
+              </tr>
+              <tr>
                 <td>AIツール</td>
-                <td>Gemini、GitHub Copilot</td>
+                <td>ChatGPT、Gemini、GitHub Copilot</td>
               </tr>
             </tbody>
           </table>
 
         <h4>勉強中のもの</h4>
-          <ul>
-            <li>UI</li>
-            <li>UX</li>
-            <li>Figma</li>
-            <li>React</li>
-            <li>生成AI</li>
+          <ul class="card">
+            <li class="card">UI</li>
+            <li class="card">UX</li>
+            <li class="card">Figma</li>
+            <li class="card">生成AI</li>
           </ul>
 
         <h4>学習に使ったサイト・書籍</h4>
@@ -134,23 +155,51 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
+    </section>
+  
+    <section class="portfolio">
+      <h2 id="portfolio__link">Portfolio</h2>
+        <dl>
+          <dt>
+             ※サムネイル予定地
+          </dt>
+          <dd>
+            <a href="portfolio/html/">HTML Knowledge Notes</a>
+            <p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
+          </dd>
+          <dt>
+            ※サムネイル予定地
+          </dt>
+          <dd>
+            <a href="portfolio/js/">JavaScript Knowledge Notes</a>
+            <p>JavaScriptの学習の中で気づいた点や、注意点をまとめたページです。</p>
+          </dd>
+        </dl>
     </section>
 
-    <section class="portfolio__back">
-      <div id="portfolio">
-        <h2 id="Portfolio">Portfolio</h2>
-          <dl>
-            <dt>
-              <a href="portfolio/html/">HTML道場</a>
-            </dt>
-            <dd>HTMLの学習用ページです。</dd>
-            <dt>
-              <a href="portfolio/js/">JavaScript道場</a>
-            </dt>
-            <dd>JavaScriptの学習用ページです。</dd>
-          </dl>
-        </div>
+    <section class="career">
+      <h2 id="career__link">Career</h2>
+        <dl>
+          <dt>1年目～2年目<br>商品・サービスの管理システム運用PJ</dt>
+          <dd>
+            金額や有効期限の設定、新商品・新サービスの追加設定を担当しました。<br>
+            企画担当や連携システム担当との調整が多く、コミュニケーション力や調整力を鍛えることができました。
+            また、設定値の変更に伴う影響範囲の調査を通じて、システム全体の理解を深めることができました。
+            ドキュメント化の重要性も学びました。
+          </dd>
+          <dt>3年目～4年目<br>通信システムのデータベース移行PJ</dt>
+          <dd>
+            主にデータベース（Oracle）のデータ移行ツールの開発、実際の移行作業をを担当しました。<br>
+            RDBMSの基本的な動作原理、テーブル設計の思想やSQL、PL/SQLの知識を深めることができました。
+            またテスト工程にも携わり、テストケースの設計からソフトウェア品質の重要性を学びました。
+          </dd>
+          <dt>5年目<br>顧客情報管理システムの運用</dt>
+          <dd>
+            BIツールを使ったデータ抽出業務を担当しました。<br>
+            大量のデータの取り扱い方法や、データの精査方法を学びました。SQLではなく、BIツールの操作によりデータ抽出を行うため、ツールの特性を理解することの重要性を学びました。
+          </dd>
+        </dl>
     </section>
   </main>
 

@@ -2,17 +2,20 @@
 <html lang="ja">
 <head>
 
-    <!-- メタ情報 -->
-    <meta charset="UTF-8">
-    <meta name="author" content="S.K" />
+  <!-- メタ情報 -->
+  <meta charset="UTF-8">
+  <meta name="author" content="S.K" />
 
-    <!-- デザイン関連 -->
+  <!-- デザイン関連 -->
     <meta name="description" content="S.KによるJavaScriptの学習用ページです。" />
     <meta name="viewport" content="width=device-width" />
-    <link href="../../styles/destyle.css" rel="stylesheet">
-    <link href="../../styles/subpage_style.css" rel="stylesheet">
+    <link href="../../styles/base/destyle.css" rel="stylesheet">
+    <link href="../../styles/base/base.css" rel="stylesheet">
+    <link href="../../styles/layout/header.css" rel="stylesheet">   
+    <link href="../../styles/layout/footer.css" rel="stylesheet">
+    <link href="../../styles/layout/reference.css" rel="stylesheet">
 
-    <title>HTML道場 - S.K's Portfolio</title>
+    <title>HTML Knowledge Notes - S.K's Portfolio</title>
 
     <!-- スクリプト -->
     <script src="../../scripts/header_footer.js"></script>
@@ -26,8 +29,8 @@
     
     <main>
         <section class="content__block">
-            <h2>HTML道場</h2>
-            <p>HTMLの学習用ページです。</p>
+            <h2>HTML Knowledge Notes</h2>
+            <p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
         </section>
 
         <section class="content__block">
@@ -53,6 +56,41 @@
             </ul>
         </section>
 
+        <section class="content__block">
+            <h2 id="#2">border-radius一括指定時の順番</h2>
+            <pre><code>
+            border-radius: 左上 右上 右下 左下;
+            </code></pre>
+            <p>border-radiusの値を一括指定する際、順番は「左上 右上 右下 左下」です。</p>
+        </section>
+
+        <section class="content__block">
+            <h2 id="#3">border一括指定時</h2>
+            <pre><code>
+            border: 幅 スタイル 色;
+            </code></pre>
+            <p>borderの値を一括指定する際、paddingやmarginのように個別指定は出来ないので注意。</p>
+        </section>
+
+        <section class="content__block">
+            <h2 id="#4">display: grid;</h2>
+            <p>Gridが効くのは「直下の子要素」だけ。例えば、</p>
+            <pre><code>
+&lt;section class="parent"&gt;
+  &lt;dl&gt;
+    &lt;dt class="child1"&gt;...&lt;/dt&gt;
+  &lt;/dl&gt;
+            </code></pre>
+            というHTMLに
+            <pre><code>
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+            </code></pre>
+            とCSSを指定しても、child1やchild2にはGridは効かない。<br>
+            Gridを効かせたい場合は、dlにdisplay: grid;を指定する必要がある。
+        </section>
     </main>
 
     <aside>

@@ -1,0 +1,22 @@
+/* Card Component Styles */
+ul.card {
+    display: flex;
+    flex-wrap: wrap;
+}
+li.card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 0.5rem lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li.card:hover {
+    transform: scale(1.1);
+    transition: all .5s ease-out 0.1s;
+}
