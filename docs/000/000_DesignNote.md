@@ -24,9 +24,16 @@ TOPページはポートフォリオサイトにおいて、訪問者が一番�
 
 ### ワイヤーフレーム
 #### PC版
-<img src="000_Wireframe.svg">
+<img src="000_PC_Wireframe.svg">
+
+- Profileセクションについて、当初No1で制作しようとしていたが、視線移動が複雑なためNo2に途中から修正。
+
+|N01|No2|
+|-----|-----|
+|<img src="No1.png">|<img src="No2.png">|
 
 #### タブレット版
+<img src="000_TB_Wireframe.svg">
 
 #### スマートフォン版
 
