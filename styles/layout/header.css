@@ -3,6 +3,7 @@
 header {
   padding: 0 2vw;
   width: 100%;
+  min-height: var(--header-hight);
   border-radius: 0 0 2rem 2rem;
   background-color: white;
   display: flex;
@@ -13,12 +14,11 @@ header {
 }
 
 header img[src$=".svg"] {
-    transform: scale(1.8);
+  transform: scale(1.8);
 }
 
 /* nav breadcrumb styles */
 nav#breadcrumb {
-  grid-area: breadcrumb;
   width: 100%;
   padding: 8rem 0 0 2rem;
   background-color: lightblue;
@@ -53,14 +53,19 @@ header a:hover {
 
 /* Tablet Contents Style */
 @media screen and (max-width:1280px) {
-    header img[src$=".svg"] {
-        transform: scale(1.5);
-    }
+  header img[src$=".svg"] {
+      transform: scale(1.2);
+  }
+
+  header a {
+    width: 4rem;
+    font-size: 0.5rem;
+  }
 }
 
 /* SmartPhone Image styles */
 @media screen and (max-width:500px) {
-    header img[src$=".svg"] {
-        transform: scale(1);
-    }
+  header img[src$=".svg"] {
+      transform: scale(1);
+  }
 }

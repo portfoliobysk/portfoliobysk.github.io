@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
-    scroll-padding: 8rem;
+    --header-hight: 8rem;
+    scroll-padding-top: var(--header-hight);
     font-family: 'Century Gothic', sans-serif;
     line-height: 1.5;
 }
@@ -102,4 +103,18 @@ th, td {
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+}
+
+/* Tablet Contents Style */
+@media screen and (max-width:1280px) {
+  :root {
+    --header-hight: 8rem;
+  }
+}
+
+/* SmartPhone Image styles */
+@media screen and (max-width:500px) {
+  :root {
+    --header-hight: 8rem;
+  }
 }

@@ -1,12 +1,16 @@
 /* Card Component Styles */
 ul.card {
+    width: 100%;
+    max-width: 60rem;
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 li.card {
     margin: 1rem;
     padding: 1rem;
     width: 10rem;
+    min-width: 10rem;
     height: 10rem;
     font-size: 1.5rem;
     font-weight: bold;
