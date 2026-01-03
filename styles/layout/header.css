@@ -3,6 +3,7 @@
 header {
   padding: 0 2vw;
   width: 100%;
+  min-height: var(--header-hight);
   border-radius: 0 0 2rem 2rem;
   background-color: white;
   display: flex;
@@ -13,12 +14,11 @@ header {
 }
 
 header img[src$=".svg"] {
-    transform: scale(1.8);
+  transform: scale(1.8);
 }
 
 /* nav breadcrumb styles */
 nav#breadcrumb {
-  grid-area: breadcrumb;
   width: 100%;
   padding: 8rem 0 0 2rem;
   background-color: lightblue;
@@ -53,14 +53,115 @@ header a:hover {
 
 /* Tablet Contents Style */
 @media screen and (max-width:1280px) {
-    header img[src$=".svg"] {
-        transform: scale(1.5);
-    }
+  header img[src$=".svg"] {
+      transform: scale(1.2);
+  }
+
+  header a {
+    width: 4rem;
+    font-size: 1rem;
+  }
 }
 
 /* SmartPhone Image styles */
 @media screen and (max-width:500px) {
-    header img[src$=".svg"] {
-        transform: scale(1);
-    }
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  header img[src$=".svg"] {
+      transform: scale(0.8);
+  }
+
+  /*
+   * ハンバーガーメニュー
+   */
+  .nav__wrapper {
+    position: relative;
+  }
+  .nav__icon {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    --nav__icon-top: 20px;
+    top: var(--nav__icon-top);
+    right: 20px;
+    cursor: pointer;
+    z-index: 3;
+    display: inline-block;
+  }
+  /* 三本線 */
+  .nav__icon span {
+    display: block;
+    height: 4px;
+    margin: 6px 0;
+    background: dimgray;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  /* X線に変形 */
+  #nav__toggle:checked + .nav__icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  #nav__toggle:checked + .nav__icon span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav__toggle:checked + .nav__icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+  }
+  #nav__toggle:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  /* メニュー本体 */
+  nav {
+    position: fixed;
+    top: var(--nav__icon-top);
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: right 0.5s ease;
+    z-index: 2;
+  }
+  #header__nav__contents, #header__nav__links {
+    display: flex;
+    flex-direction: column;
+  }
+  #nav__toggle:checked ~ nav {
+    right: 0;
+  }
+
+  header a {
+    border-top: 1px solid dimgray;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    padding: 0.5rem;
+    width: 100%;
+    color: dimgray;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  header a:hover {
+    border-radius: inherit;
+    background-color: inherit;
+    color: inherit;
+    font-weight: inherit;
+  }
+  header a {
+    right: 0;
+  }
 }

@@ -1,24 +1,29 @@
 @charset "UTF-8";
 /* hero Section styles */
 section.hero__section {
-    max-width: 100%;
-    min-height: 600px;
-    color: white;
-    background: linear-gradient(deepskyblue, green);
-    border-radius: 0 0 2rem 2rem;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-areas:
-        "slogan   img"
-        "explain  img";
+  padding: 0 1rem 5rem 1rem;
+  max-width: 100%;
+  min-height: 600px;
+  color: white;
+  background-image:
+      url("../../images/mountain.svg"),
+      linear-gradient(deepskyblue, green);
+  background-size:
+      50% auto,
+      cover; 
+  background-repeat: no-repeat;
+  background-position:
+      100% bottom,
+      center;
+  border-radius: 0 0 2rem 2rem;
+  justify-content: end;
+  align-items: flex-start;
 }
 h2.slogan {
-  grid-area: slogan;
   margin: 0 0 2rem 5rem;
   font-size: 6rem;
   color: white;
   text-align: left;
-  align-self: end;
   line-height: 1;
 }
 span.slogan__top {
@@ -29,26 +34,11 @@ span.slogan__sub {
   font-size: 3rem;
 }
 p.slogan__explain {
-  grid-area: explain;
   margin: 0 0 0 5rem;
-}
-img.slogan__img {
-  grid-area: img;
-  width: 500px;
-  align-self: end;
 }
 
 /* profile Section styles */
-div#profile__layput {
-  max-width: 100%;
-  margin-bottom: 0;
-  display: grid;
-  grid-template-areas: 
-          "profile__img profile__name"
-          "profile__img profile__contents";
-}
 div#profile__img {
-  grid-area: profile__img;
   width: 300px;
   height: 300px;
   border-radius: 20rem;
@@ -56,20 +46,11 @@ div#profile__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: end;
-}
-section.profile__section h3 {
-  grid-area: profile__name;
-  padding: 0 0 0 1.5rem;
 }
 section.profile__section p {
-  grid-area: profile__contents;
   padding: 1.5rem;
   width: 100%;
   max-width: 60rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 /* skills Section styles */
@@ -103,17 +84,17 @@ li.react {
 
 /* portfolio Section styles */
 section.portfolio {
-    max-width: 90%;
-    background-color: LightBlue;
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 90%;
+  background-color: LightBlue;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section.portfolio dl {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 section.portfolio dt {
   margin: 2rem;
@@ -125,30 +106,16 @@ section.portfolio a {
   font-weight: bold;
 }
 
-/* Tablet Contents Style */
-@media screen and (max-width:1280px) {
-    main {
-        padding-top: 8rem;
-    }
-}
-
-/* SmartPhone Contents styles */
-@media screen and (max-width:500px) {
-    main {
-        padding-top: 7rem;
-    }
-}
-
 /* Career Section styles */
 section.career {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section.career dl {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 section.career dt {
   margin: 2rem;
@@ -158,32 +125,55 @@ section.career dd {
   margin: 2rem;
 }
 
-/* Tablet Font styles */
-@media screen and (max-width:1280px) {
-    h2.slogan {
-        font-size: 4rem;
-        color: white;
-    }
-}
-
-/* SmartPhone Font styles */
-@media screen and (max-width:500px) {
-    h2.slogan {
-        font-size: 2.5rem;
-        color: white;
-    }
-}
-
 /* Tablet Contents Style */
 @media screen and (max-width:1280px) {
-    li:hover{
-        pointer-events: none;
-    }
+  h2.slogan {
+    margin: 0 0 2rem 2rem;
+  }
+  span.slogan__top {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  span.slogan__sub {
+    font-size: 3rem;
+  }
+  p.slogan__explain {
+    margin: 0 0 0 2rem;
+  }
+
+  li:hover{
+      pointer-events: none;
+  }
 }
 
 /* SmartPhone Contents styles */
 @media screen and (max-width:500px) {
-    li:hover{
-        pointer-events: none;
-    }
+  h2.slogan {
+    margin: 0 0 2rem 0;
+  }
+  span.slogan__top {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  span.slogan__sub {
+    font-size: 2rem;
+  }
+  p.slogan__explain {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  li:hover{
+    pointer-events: none;
+  }
+
+  section.portfolio dl {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  section.career dl {
+    display: flex;
+    flex-direction: column;
+  }
 }

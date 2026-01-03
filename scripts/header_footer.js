@@ -1,14 +1,31 @@
 const headerContent = `
   <h1><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></h1>
+  <div class="nav__wrapper">
+    <input type="checkbox" id="nav__toggle" hidden>
+    <label class="nav__icon" for="nav__toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="overlay"></div>
     <nav>
-      <a href="#profile__link">Profile</a>
-      <a href="#skills__link">Skill's</a>
-      <a href="#portfolio__link">Portfolio</a>
-      <a href="#career__link">Career</a>
-      <a href="https://github.com/portfoliobysk/">GitHub</a>
-      <a href="https://forms.gle/CALFLhAjRGj49LZC6">Contact</a>
+      <div id="header__nav__contents">
+        <a href="#profile__link">Profile</a>
+        <a href="#skills__link">Skill's</a>
+        <a href="#portfolio__link">Portfolio</a>
+        <a href="#career__link">Career</a>
+      </div>
+      <div id="header__nav__links">
+        <a href="https://github.com/portfoliobysk/"><img src="https://portfoliobysk.github.io/images/github.svg" alt="GitHub"></a>
+        <a href="https://forms.gle/CALFLhAjRGj49LZC6"><img src="https://portfoliobysk.github.io/images/mail.svg" alt="Contact"></a>
+      </div>
     </nav>
+  </div>
 `;
+
+document.addEventListener("DOMContentLoaded", () => {
+
+});
 
 const breadcrumbContent = () => {
     const path = window.location.pathname;
@@ -48,27 +65,42 @@ const footerContent = `
     <a href="#career__link">Career</a>
   </div>
   <div id="footer__nav__links">
-    <a href="https://github.com/portfoliobysk/">GitHub</a>
-    <a href="https://forms.gle/CALFLhAjRGj49LZC6">Contact</a>
+    <a href="https://github.com/portfoliobysk/"><img src="https://portfoliobysk.github.io/images/github.svg" alt="GitHub"></a>
+    <a href="https://forms.gle/CALFLhAjRGj49LZC6"><img src="https://portfoliobysk.github.io/images/mail.svg" alt="Contact"></a>
   </div>
 `;
 
 // ページロード後に実行
 document.addEventListener('DOMContentLoaded', () => {
 
-    const headerPlaceholder = document.querySelector('header');
-    if (headerPlaceholder) {
-        headerPlaceholder.innerHTML = headerContent;
-    }
+  const headerPlaceholder = document.querySelector('header');
+  if (headerPlaceholder) {
+      headerPlaceholder.innerHTML = headerContent;
+  }
 
-    const breadcrumbPlaceholder = document.getElementById('breadcrumb');
-    if (breadcrumbPlaceholder) {
-        breadcrumbPlaceholder.innerHTML = breadcrumbContent();
-    }
+  const breadcrumbPlaceholder = document.getElementById('breadcrumb');
+  if (breadcrumbPlaceholder) {
+      breadcrumbPlaceholder.innerHTML = breadcrumbContent();
+  }
 
-    const footerPlaceholder = document.querySelector('footer');
-    if (footerPlaceholder) {
-        footerPlaceholder.innerHTML = footerContent;
-    }
+  const footerPlaceholder = document.querySelector('footer');
+  if (footerPlaceholder) {
+      footerPlaceholder.innerHTML = footerContent;
+  }
+
+  /*
+   * ハンバーガーメニューのページ内リンクでオーバーレイを閉じるためのスクリプト
+   */
+  const toggle = document.getElementById("nav__toggle");
+  const nav = document.querySelector("nav");
+
+  if (!toggle || !nav) return;
+
+  nav.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+
+    toggle.checked = false;
+  });
         
 });

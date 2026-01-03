@@ -7,18 +7,18 @@
   <meta name="author" content="S.K" />
 
   <!-- デザイン関連 -->
-    <meta name="description" content="S.KによるJavaScriptの学習用ページです。" />
-    <meta name="viewport" content="width=device-width" />
-    <link href="../../styles/base/destyle.css" rel="stylesheet">
-    <link href="../../styles/base/base.css" rel="stylesheet">
-    <link href="../../styles/layout/header.css" rel="stylesheet">   
-    <link href="../../styles/layout/footer.css" rel="stylesheet">
-    <link href="../../styles/layout/reference.css" rel="stylesheet">
+  <meta name="description" content="S.KによるHTMLのナレッジノートです。" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="../../styles/base/destyle.css" rel="stylesheet">
+  <link href="../../styles/base/base.css" rel="stylesheet">
+  <link href="../../styles/layout/header.css" rel="stylesheet">   
+  <link href="../../styles/layout/footer.css" rel="stylesheet">
+  <link href="../../styles/layout/reference.css" rel="stylesheet">
 
-    <title>HTML Knowledge Notes - S.K's Portfolio</title>
+  <title>HTML Knowledge Notes - S.K's Portfolio</title>
 
-    <!-- スクリプト -->
-    <script src="../../scripts/header_footer.js"></script>
+  <!-- スクリプト -->
+  <script src="../../scripts/header_footer.js"></script>
 
 </head>
 <body>
@@ -91,6 +91,21 @@
             とCSSを指定しても、child1やchild2にはGridは効かない。<br>
             Gridを効かせたい場合は、dlにdisplay: grid;を指定する必要がある。
         </section>
+
+        <section class="content__block">
+            <h2>background-image</h2>
+            <p>background-imageはレイヤーで考えると分かりやすい。</p>
+            <pre><code>
+background-image:
+  url("../../images/mountain.svg"),
+  linear-gradient(deepskyblue, green);
+
+background-size:
+  50% auto,  /* 上のレイヤーの指定 */
+  cover;     /* 下のレイヤーの指定 */
+            </code></pre>
+        </section>
+
     </main>
 
     <aside>
