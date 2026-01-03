@@ -13,7 +13,7 @@ body {
 
 /* Contents styles */
 main {
-    padding-top: 5rem;
+
     background-color: white;
     color: dimgray;
     display: flex;
@@ -115,6 +115,6 @@ th, td {
 /* SmartPhone Image styles */
 @media screen and (max-width:500px) {
   :root {
-    --header-hight: 8rem;
+    --header-hight: 5rem;
   }
 }

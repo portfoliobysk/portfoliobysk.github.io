@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* hero Section styles */
 section.hero__section {
+  padding: 0 1rem 5rem 1rem;
   max-width: 100%;
   min-height: 600px;
   color: white;
@@ -15,6 +16,7 @@ section.hero__section {
       100% bottom,
       center;
   border-radius: 0 0 2rem 2rem;
+  justify-content: end;
   align-items: flex-start;
 }
 h2.slogan {
