@@ -23,19 +23,18 @@
 </head>
 <body>
 
-    <header></header>
-
-    <nav id="breadcrumb"></nav>
+  <header></header>
+  <nav id="breadcrumb"></nav>
     
-    <main>
-        <section class="content__block">
-            <h2>HTML Knowledge Notes</h2>
-            <p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
-        </section>
+  <main>
+    <section class="content__block">
+      <h2>HTML Knowledge Notes</h2>
+        <p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
+    </section>
 
-        <section class="content__block">
-            <h3 id="#1">HTMLの全体</h3>
-            <pre><code>
+    <section class="content__block">
+      <h3 id="#1">HTMLの全体</h3>
+        <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -45,7 +44,7 @@
 
     &lt;/body&gt;
 &lt;/html&gt;
-            </code></pre>
+        </code></pre>
 
             <h4>解説</h4>
             <h5>DOCTYPE宣言</h5>
@@ -57,24 +56,24 @@
         </section>
 
         <section class="content__block">
-            <h2 id="#2">border-radius一括指定時の順番</h2>
+            <h3 id="#2">border-radius一括指定時の順番</h3>
             <pre><code>
             border-radius: 左上 右上 右下 左下;
             </code></pre>
-            <p>border-radiusの値を一括指定する際、順番は「左上 右上 右下 左下」です。</p>
+            <p>border-radiusの値を一括指定する際、順番は「左上 右上 右下 左下」</p>
         </section>
 
         <section class="content__block">
-            <h2 id="#3">border一括指定時</h2>
+            <h3 id="#3">border一括指定時</h3>
             <pre><code>
             border: 幅 スタイル 色;
             </code></pre>
-            <p>borderの値を一括指定する際、paddingやmarginのように個別指定は出来ないので注意。</p>
+            <p>borderの値を一括指定する際、paddingやmarginのように<strong>個別指定は出来ない</strong>ので注意。</p>
         </section>
 
         <section class="content__block">
-            <h2 id="#4">display: grid;</h2>
-            <p>Gridが効くのは「直下の子要素」だけ。例えば、</p>
+            <h3 id="#4">display: grid;</h3>
+            <p><b>Grid</b>が効くのは<strong>「直下の子要素」</strong>だけ。例えば、</p>
             <pre><code>
 &lt;section class="parent"&gt;
   &lt;dl&gt;
@@ -93,7 +92,7 @@
         </section>
 
         <section class="content__block">
-            <h2>background-image</h2>
+            <h3>background-image</h3>
             <p>background-imageはレイヤーで考えると分かりやすい。</p>
             <pre><code>
 background-image:
@@ -106,6 +105,15 @@ background-size:
             </code></pre>
         </section>
 
+                <section class="content__block">
+                    <h2>flexレイアウトとgridレイアウトの違い</h2>
+                    <p>
+                        <b>flex</b>は一次元（横または縦）の並びにおいて、
+                        各要素がどのように伸縮・配置されるかといった<strong>「要素の振る舞い」</strong>を指定する。
+                        一方、<b>grid</b>は行と列を持つ二次元レイアウトを前提とし、<strong>「全体の構造を定義」</strong>するためのプロパティが中心となる。
+                    </p>
+        </section>
+
     </main>
 
     <aside>
@@ -116,7 +124,7 @@ background-size:
         </nav>
     </aside>
 
-    <footer></footer>
+  <footer></footer>
 
 </body>
 </html>

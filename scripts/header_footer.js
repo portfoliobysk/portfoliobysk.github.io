@@ -63,10 +63,10 @@ const footerContent = `
     <a href="#skills__link">Skill's</a>
     <a href="#portfolio__link">Portfolio</a>
     <a href="#career__link">Career</a>
-  </div>
-  <div id="footer__nav__links">
-    <a href="https://github.com/portfoliobysk/"><img src="https://portfoliobysk.github.io/images/github.svg" alt="GitHub"></a>
-    <a href="https://forms.gle/CALFLhAjRGj49LZC6"><img src="https://portfoliobysk.github.io/images/mail.svg" alt="Contact"></a>
+    <div id="footer__nav__links">
+      <a class="icon__link" href="https://github.com/portfoliobysk/"><img src="https://portfoliobysk.github.io/images/github.svg" alt="GitHub"></a>
+      <a class="icon__link" href="https://forms.gle/CALFLhAjRGj49LZC6"><img src="https://portfoliobysk.github.io/images/mail.svg" alt="Contact"></a>
+    </div>
   </div>
 `;
 

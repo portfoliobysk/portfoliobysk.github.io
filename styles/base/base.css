@@ -13,8 +13,7 @@ body {
 
 /* Contents styles */
 main {
-
-    background-color: white;
+    background-color: whitesmoke;
     color: dimgray;
     display: flex;
     flex-direction: column;
