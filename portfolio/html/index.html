@@ -1,40 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
+	<head>
+		<!-- メタ情報 -->
+		<meta charset="UTF-8" />
+		<meta name="author" content="S.K" />
 
-  <!-- メタ情報 -->
-  <meta charset="UTF-8">
-  <meta name="author" content="S.K" />
+		<!-- デザイン関連 -->
+		<meta name="description" content="S.KによるHTMLのナレッジノートです。" />
+		<meta name="viewport" content="width=device-width" />
+		<link href="../../styles/base/destyle.css" rel="stylesheet" />
+		<link href="../../styles/base/base.css" rel="stylesheet" />
+		<link href="../../styles/layout/header.css" rel="stylesheet" />
+		<link href="../../styles/layout/footer.css" rel="stylesheet" />
+		<link href="../../styles/layout/reference.css" rel="stylesheet" />
 
-  <!-- デザイン関連 -->
-  <meta name="description" content="S.KによるHTMLのナレッジノートです。" />
-  <meta name="viewport" content="width=device-width" />
-  <link href="../../styles/base/destyle.css" rel="stylesheet">
-  <link href="../../styles/base/base.css" rel="stylesheet">
-  <link href="../../styles/layout/header.css" rel="stylesheet">   
-  <link href="../../styles/layout/footer.css" rel="stylesheet">
-  <link href="../../styles/layout/reference.css" rel="stylesheet">
+		<title>HTML Knowledge Notes - S.K's Portfolio</title>
 
-  <title>HTML Knowledge Notes - S.K's Portfolio</title>
+		<!-- スクリプト -->
+		<script src="../../scripts/header_footer.js"></script>
+	</head>
+	<body>
+		<header></header>
+		<nav id="breadcrumb"></nav>
 
-  <!-- スクリプト -->
-  <script src="../../scripts/header_footer.js"></script>
+		<main>
+			<section class="content__block">
+				<h2>HTML Knowledge Notes</h2>
+				<p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
+			</section>
 
-</head>
-<body>
-
-  <header></header>
-  <nav id="breadcrumb"></nav>
-    
-  <main>
-    <section class="content__block">
-      <h2>HTML Knowledge Notes</h2>
-        <p>HTMLの学習の中で気づいた点や、注意点をまとめたページです。</p>
-    </section>
-
-    <section class="content__block">
-      <h3 id="#1">HTMLの全体</h3>
-        <pre><code>
+			<section class="content__block">
+				<h3 id="#1">HTMLの全体</h3>
+				<pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -46,55 +43,63 @@
 &lt;/html&gt;
         </code></pre>
 
-            <h4>解説</h4>
-            <h5>DOCTYPE宣言</h5>
-            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
-            <ul>
-                <li>大文字で書いても小文字で書いてもOK（「&lt;!doctype html&gt;でもOK）</li>
-                <li>ただし、htmlの前後に空白を入れることはできるが、!DOCTYPEの部分はそのまま続けて書く必要がある。</li>
-            </ul>
-        </section>
+				<h4>解説</h4>
+				<h5>DOCTYPE宣言</h5>
+				<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+				<ul>
+					<li>
+						大文字で書いても小文字で書いてもOK（「&lt;!doctype html&gt;でもOK）
+					</li>
+					<li>
+						ただし、htmlの前後に空白を入れることはできるが、!DOCTYPEの部分はそのまま続けて書く必要がある。
+					</li>
+				</ul>
+			</section>
 
-        <section class="content__block">
-            <h3 id="#2">border-radius一括指定時の順番</h3>
-            <pre><code>
+			<section class="content__block">
+				<h3 id="#2">border-radius一括指定時の順番</h3>
+				<pre><code>
             border-radius: 左上 右上 右下 左下;
             </code></pre>
-            <p>border-radiusの値を一括指定する際、順番は「左上 右上 右下 左下」</p>
-        </section>
+				<p>border-radiusの値を一括指定する際、順番は「左上 右上 右下 左下」</p>
+			</section>
 
-        <section class="content__block">
-            <h3 id="#3">border一括指定時</h3>
-            <pre><code>
+			<section class="content__block">
+				<h3 id="#3">border一括指定時</h3>
+				<pre><code>
             border: 幅 スタイル 色;
             </code></pre>
-            <p>borderの値を一括指定する際、paddingやmarginのように<strong>個別指定は出来ない</strong>ので注意。</p>
-        </section>
+				<p>
+					borderの値を一括指定する際、paddingやmarginのように<strong>個別指定は出来ない</strong>ので注意。
+				</p>
+			</section>
 
-        <section class="content__block">
-            <h3 id="#4">display: grid;</h3>
-            <p><b>Grid</b>が効くのは<strong>「直下の子要素」</strong>だけ。例えば、</p>
-            <pre><code>
+			<section class="content__block">
+				<h3 id="#4">display: grid;</h3>
+				<p>
+					<b>Grid</b>が効くのは<strong>「直下の子要素」</strong>だけ。例えば、
+				</p>
+				<pre><code>
 &lt;section class="parent"&gt;
   &lt;dl&gt;
     &lt;dt class="child1"&gt;...&lt;/dt&gt;
   &lt;/dl&gt;
             </code></pre>
-            というHTMLに
-            <pre><code>
+				というHTMLに
+				<pre><code>
 .parent {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
             </code></pre>
-            とCSSを指定しても、child1やchild2にはGridは効かない。<br>
-            Gridを効かせたい場合は、dlにdisplay: grid;を指定する必要がある。
-        </section>
+				とCSSを指定しても、child1やchild2にはGridは効かない。<br />
+				Gridを効かせたい場合は、dlにdisplay: grid;を指定する必要がある。
+			</section>
 
-        <section class="content__block">
-            <h3>background-image</h3>
-            <p>background-imageはレイヤーで考えると分かりやすい。</p>
-            <pre><code>
+			<section class="content__block">
+				<h3>background-image</h3>
+				<p>background-imageはレイヤーで考えると分かりやすい。</p>
+				<pre><code>
 background-image:
   url("../../images/mountain.svg"),
   linear-gradient(deepskyblue, green);
@@ -103,28 +108,26 @@ background-size:
   50% auto,  /* 上のレイヤーの指定 */
   cover;     /* 下のレイヤーの指定 */
             </code></pre>
-        </section>
+			</section>
 
-                <section class="content__block">
-                    <h2>flexレイアウトとgridレイアウトの違い</h2>
-                    <p>
-                        <b>flex</b>は一次元（横または縦）の並びにおいて、
-                        各要素がどのように伸縮・配置されるかといった<strong>「要素の振る舞い」</strong>を指定する。
-                        一方、<b>grid</b>は行と列を持つ二次元レイアウトを前提とし、<strong>「全体の構造を定義」</strong>するためのプロパティが中心となる。
-                    </p>
-        </section>
+			<section class="content__block">
+				<h2>flexレイアウトとgridレイアウトの違い</h2>
+				<p>
+					<b>flex</b>は一次元（横または縦）の並びにおいて、
+					各要素がどのように伸縮・配置されるかといった<strong>「要素の振る舞い」</strong>を指定する。
+					一方、<b>grid</b>は行と列を持つ二次元レイアウトを前提とし、<strong>「全体の構造を定義」</strong>するためのプロパティが中心となる。
+				</p>
+			</section>
+		</main>
 
-    </main>
+		<aside>
+			<nav>
+				<ol>
+					<li><a href="#1">HTMLの全体</a></li>
+				</ol>
+			</nav>
+		</aside>
 
-    <aside>
-        <nav>
-            <ol>
-                <li><a href="#1">HTMLの全体</a></li>
-            </ol>
-        </nav>
-    </aside>
-
-  <footer></footer>
-
-</body>
+		<footer></footer>
+	</body>
 </html>

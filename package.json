@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"format": "prettier -w .",
+		"lint:js": "eslint .",
+		"lint:css": "stylelint \"**/*.css\"",
+		"lint": "npm run lint:js && npm run lint:css"
+	}
+}
