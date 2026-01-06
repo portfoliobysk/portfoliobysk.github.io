@@ -3,7 +3,7 @@
 header {
   padding: 0 2vw;
   width: 100%;
-  min-height: var(--header-hight);
+  min-height: var(--header-height);
   border-radius: 0 0 2rem 2rem;
   background-color: white;
   display: flex;
@@ -17,7 +17,8 @@ header img[src$=".svg"] {
   transform: scale(1.8);
 }
 
-div#header__nav__contents, div#header__nav__links {
+div#header__nav__contents, 
+div#header__nav__links {
   display: flex;
 }
 
@@ -45,12 +46,9 @@ nav {
 div#header__nav__links a {
   padding: 0.5rem 0 0.5rem 0;
   border: 0;
-}
-div#header__nav__links a:hover {
-  filter: invert(100%) sepia(85%) saturate(262%) hue-rotate(248deg) brightness(114%) contrast(101%);
-}
-div#header__nav__links img[src$=".svg"] {
-  transform: scale(1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* nav breadcrumb styles */
@@ -77,7 +75,7 @@ nav#breadcrumb ol li {
 
   header a:hover {
     border-radius: 2rem;
-    color: dimgray  ;
+    color: dimgray;
     background-color: white;
     font-weight: normal;
   }
@@ -85,7 +83,11 @@ nav#breadcrumb ol li {
   nav {
     display: block;
   }
-
+  div#header__nav__links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   div#header__nav__links a {
     border: 0;
     background-color: white;
@@ -114,7 +116,7 @@ nav#breadcrumb ol li {
    * ハンバーガーメニュー
    */
   div.nav__wrapper {
-    --nav__icon-top: 20px;
+    --nav__icon-top: 10px;
   }
   .nav__wrapper {
     position: relative;
@@ -164,6 +166,7 @@ nav#breadcrumb ol li {
   /* メニュー本体 */
   nav {
     margin: var(--nav__icon-top) 0 0 0;
+    padding: var(--nav__icon-top) 0 0 0;
     position: fixed;
     right: 100%;
     width: 100%;
