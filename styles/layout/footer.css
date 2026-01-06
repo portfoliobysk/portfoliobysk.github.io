@@ -4,19 +4,19 @@ footer {
   grid-area: footer;
   padding: 3rem 0;
   width: 100%;
+  color: white;
   background-color: dimgray;
   border-radius: 2rem 2rem 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-            "footer__copy  footer__nav__contents footer__nav__links";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 div#footer__copy {
-  grid-area: footer__copy;
+  flex: 1 1 0;
+  flex-grow: 1;
   padding: 0 2rem 0 2rem;
   font-size: 1.2rem;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,8 @@ div#footer__copy {
 }
 
 div#footer__nav__contents {
-  grid-area: footer__nav__contents;
+  flex: 1 1 0;
+  flex-grow: 1;
   padding: 0 2rem 0 2rem;
   height: 100%;
   border-left: 1px solid white;
@@ -33,23 +34,22 @@ div#footer__nav__contents {
 }
 
 div#footer__nav__links {
-  grid-area: footer__nav__links;
   padding: 0 2rem 0 2rem;
   height: 100%;
-  border-left: 1px solid white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-self: center;
 }
 
-/* footer link styles */
 footer a {
   padding: 0.5rem;
   margin: 0.5rem;
+  width: 80%;
   border: 1px solid white;
   border-radius: 2rem;
   height: 2.5rem;
+  align-self: center;
   text-align: center;
-  color: white;
   text-decoration: none;
 } 
 footer a:hover {
@@ -61,17 +61,45 @@ footer a:hover {
 
 /* Tablet Contents Style */
 @media screen and (max-width:1280px) {
-  footer img[src$=".svg"] {
+  div#footer__copy img[src$=".svg"] {
     transform: scale(0.8);
   }
-
+  footer a:hover {
+    border-radius: 2rem;
+    color: inherit;
+    background-color: inherit;
+    font-weight: inherit;
+  }
 }
 
 /* SmartPhone Image styles */
 @media screen and (max-width:500px) {
   footer {
-    display: flex;
     flex-direction: column;
   }
+  footer a:hover {
+    border-radius: 2rem;
+    color: inherit;
+    background-color: inherit;
+    font-weight: inherit;
+  }
 
+  div#footer__copy {
+    margin-bottom: 1rem;
+  }
+
+  div#footer__nav__contents, div#footer__nav__links {
+    border-left: 0;
+  }
+  div#footer__nav__links {
+    width: 100%;
+  }
+  div#footer__nav__links a {
+    margin: 1rem 0.5rem 0 0.5rem;
+    border: 0;
+    transform: scale(1.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
