@@ -10,7 +10,7 @@ const icons = `
 `;
 
 const headerContent = `
-  <h1><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></h1>
+  <h1><a class="logo" href="/"><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></a></h1>
   <div class="nav__wrapper">
     <input type="checkbox" id="nav__toggle" hidden>
     <label class="nav__icon" for="nav__toggle">
@@ -21,10 +21,10 @@ const headerContent = `
     <div class="overlay"></div>
     <nav>
       <div id="header__nav__contents">
-        <a href="#profile__link">Profile</a>
-        <a href="#skills__link">Skill's</a>
-        <a href="#portfolio__link">Portfolio</a>
-        <a href="#career__link">Career</a>
+        <a href="/index.html#profile__link">Profile</a>
+        <a href="/index.html#skills__link">Skill's</a>
+        <a href="/index.html#portfolio__link">Portfolio</a>
+        <a href="/index.html#career__link">Career</a>
       </div>
       <div id="header__nav__links">
         <a href="https://github.com/portfoliobysk/">
@@ -73,14 +73,14 @@ const breadcrumbContent = () => {
 
 const footerContent = `
   <div id="footer__copy">
-    <img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo">
+    <a class="logo" href="/"><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></a>
     <small>&#169; 2025 S.K</small>
   </div>
   <div id="footer__nav__contents">
-    <a href="#profile__link">Profile</a>
-    <a href="#skills__link">Skill's</a>
-    <a href="#portfolio__link">Portfolio</a>
-    <a href="#career__link">Career</a>
+    <a href="/index.html#profile__link">Profile</a>
+    <a href="/index.html#skills__link">Skill's</a>
+    <a href="/index.html#portfolio__link">Portfolio</a>
+    <a href="/index.html#career__link">Career</a>
     <div id="footer__nav__links">
       <a class="icon__link" href="https://github.com/portfoliobysk/">
         <svg class="icon" aria-hidden="true">

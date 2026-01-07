@@ -20,7 +20,8 @@
 		<title>S.K's Portfolio</title>
 
 		<!-- スクリプト -->
-		<script src="scripts/header_footer.js"></script>
+		<script src="scripts/header_footer.js" defer></script>
+		<script src="scripts/card.js" defer></script>
 	</head>
 	<body>
 		<div id="icons" style="display: none"></div>
@@ -54,8 +55,13 @@
 				<section id="skills__secton">
 					<h3 id="skills__link">Skill's</h3>
 					<h4>使用言語</h4>
-					<ul class="card">
-						<li class="html card">HTML</li>
+					<ul class="cards">
+						<li class="html card">
+							HTML
+							<ul>
+								<li>セマンティックタグ</li>
+							</ul>
+						</li>
 						<li class="css card">CSS</li>
 						<li class="js card">JavaScript</li>
 						<li class="ts card">TypeScript</li>
@@ -118,7 +124,7 @@
 					</table>
 
 					<h4>勉強中のもの</h4>
-					<ul class="card">
+					<ul class="cards">
 						<li class="card">UI</li>
 						<li class="card">UX</li>
 						<li class="card">Figma</li>

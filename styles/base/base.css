@@ -1,127 +1,131 @@
 @charset "UTF-8";
 :root {
-    --header-hight: 8rem;
-    scroll-padding-top: var(--header-hight);
-    font-family: 'Century Gothic', sans-serif;
-    line-height: 1.5;
+	--header-hight: 8rem;
+	scroll-padding-top: var(--header-hight);
+	font-family: 'Century Gothic', sans-serif;
+	line-height: 1.5;
+	scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* Contents styles */
 main {
-    background-color: whitesmoke;
-    color: dimgray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative; 
-    z-index: 1;
+	background-color: whitesmoke;
+	color: dimgray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 
 /* Section styles */
 section {
-    padding: 1rem;
-    /* 
+	padding: 1rem;
+	/* 
      * width を 100% にしておき、max-width で最大幅を指定することで、
      * 画面幅が狭い場合に自動的に縮むようにする。
      */
-    width: 100%;
-    max-width: 60rem;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+	width: 100%;
+	max-width: 60rem;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 /* Font styles */
 h1 {
-    margin: 1rem;
-    padding: 1rem;
+	margin: 1rem;
+	padding: 1rem;
 }
 h2 {
-   margin: 1rem 0.5rem 0.5rem 0;
-   font-size: 4rem;
+	margin: 1rem 0.5rem 0.5rem 0;
+	font-size: 4rem;
 }
 h3 {
-    margin: 2rem 0;
-    font-size: 3rem;
+	margin: 2rem 0;
+	font-size: 3rem;
 }
 h4 {
-    margin: 2rem 0;
-    font-size: 2rem;
+	margin: 2rem 0;
+	font-size: 2rem;
 }
 
 /* List styles */
 ul {
-    list-style: square;
-    padding: 2rem;
+	list-style: square;
+	padding: 2rem;
 }
 ol {
-    list-style-type: decimal;
-    padding: 0.5rem;
+	list-style-type: decimal;
+	padding: 0.5rem;
 }
 li {
-  width: auto;
-  height: auto;
-  font-size: 1rem;
-  font-weight: normal;
-  color: black;
-  background-color: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  display: initial;
+	width: auto;
+	height: auto;
+	font-size: 1rem;
+	font-weight: normal;
+	color: black;
+	background-color: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	display: initial;
 }
 
 /* Link styles */
 a {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 a:hover {
-    font-weight: bold;
-    text-decoration: none;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 /* Table styles */
 table {
-    margin: 0.5rem 0;
-    width: 100%;
-    max-width: 60rem;
-    overflow-wrap: break-word;
+	margin: 0.5rem 0;
+	width: 100%;
+	max-width: 60rem;
+	overflow-wrap: break-word;
 }
-th, td {
-    padding: 0.75rem;
-    border: 1px solid dimgray;
-    text-align: left;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+th,
+td {
+	padding: 0.75rem;
+	border: 1px solid dimgray;
+	text-align: left;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
 }
 
 /* SVG Contents Style */
 .icon {
-  width: 24px;
-  height: 24px;
-  display:block;
-  justify-content: center;
+	width: 24px;
+	height: 24px;
+	display: block;
+	justify-content: center;
 }
 
 /* Tablet Contents Style */
-@media screen and (max-width:1280px) {
-  :root {
-    --header-hight: 8rem;
-  }
+@media screen and (max-width: 1280px) {
+	:root {
+		--header-hight: 8rem;
+		scroll-behavior: smooth;
+	}
 }
 
 /* SmartPhone Image styles */
-@media screen and (max-width:500px) {
-  :root {
-    --header-hight: 5rem;
-  }
+@media screen and (max-width: 500px) {
+	:root {
+		--header-hight: 5rem;
+		scroll-behavior: smooth;
+	}
 }
