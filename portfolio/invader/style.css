@@ -1,128 +1,138 @@
 :root {
-  --bg: #0b1023;
-  --panel: #121a33;
-  --line: #2b3a66;
-  --accent: #65f3b1;
-  --text: #e8f2ff;
+	--bg: #0b1023;
+	--panel: #121a33;
+	--line: #2b3a66;
+	--accent: #65f3b1;
+	--text: #e8f2ff;
 }
 
 .game-page {
-  padding: 20px 16px 24px;
-  min-height: 100svh;
-  color: var(--text);
-  font-family: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	padding: 20px 16px 24px;
+	min-height: 100svh;
+	color: var(--text);
+	font-family:
+		'BIZ UDPGothic', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo,
+		sans-serif;
 }
 
 .game-hero {
-  max-width: 900px;
-  margin: 0 auto 16px;
+	max-width: 900px;
+	margin: 0 auto 16px;
 }
 
 .game-hero h2 {
-  font-size: clamp(28px, 3.6vw, 40px);
-  letter-spacing: 0.04em;
+	font-size: clamp(28px, 3.6vw, 40px);
+	letter-spacing: 0.04em;
 }
 
 .game-area {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  max-height: calc(100svh - 220px);
-  background:
-    radial-gradient(1200px 600px at 10% 10%, #1a2750 0%, transparent 55%),
-    radial-gradient(900px 540px at 90% 10%, #172046 0%, transparent 60%),
-    linear-gradient(150deg, #0a1022 0%, #0d1530 40%, #0f1a3a 100%);
-  box-shadow: 0 16px 50px rgba(4, 8, 24, 0.5);
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 18px;
+	border-radius: 18px;
+	border: 1px solid var(--line);
+	max-height: calc(100svh - 220px);
+	background:
+		radial-gradient(1200px 600px at 10% 10%, #1a2750 0%, transparent 55%),
+		radial-gradient(900px 540px at 90% 10%, #172046 0%, transparent 60%),
+		linear-gradient(150deg, #0a1022 0%, #0d1530 40%, #0f1a3a 100%);
+	box-shadow: 0 16px 50px rgba(4, 8, 24, 0.5);
 }
 
 .hud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 22px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #c6d6ff;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 22px;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #c6d6ff;
 }
 
 .canvas-wrap {
-  position: relative;
-  margin: 12px auto;
-  width: min(520px, 90vw, 60vh);
+	position: relative;
+	margin: 12px auto;
+	width: min(520px, 90vw, 60vh);
 }
 
 #game {
-  display: block;
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid #203055;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.06), transparent 35%),
-    #060a18;
+	display: block;
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid #203055;
+	background:
+		radial-gradient(
+			circle at 10% 20%,
+			rgba(255, 255, 255, 0.06),
+			transparent 35%
+		),
+		#060a18;
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  text-shadow: 0 0 12px rgba(101, 243, 177, 0.5);
-  pointer-events: none;
-  padding: 16px;
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 0.08em;
+	color: var(--accent);
+	text-shadow: 0 0 12px rgba(101, 243, 177, 0.5);
+	pointer-events: none;
+	padding: 16px;
 }
 
 .controls {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
+	display: flex;
+	gap: 12px;
+	margin-top: 12px;
 }
 
 .controls button {
-  border-radius: 999px;
-  border: 1px solid #2b416e;
-  background: #0f1a36;
-  color: var(--text);
-  padding: 10px 20px;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+	border-radius: 999px;
+	border: 1px solid #2b416e;
+	background: #0f1a36;
+	color: var(--text);
+	padding: 10px 20px;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
 }
 
 .controls button:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent);
-  color: var(--accent);
+	transform: translateY(-1px);
+	border-color: var(--accent);
+	color: var(--accent);
 }
 
 .help {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #b8c7ea;
-  line-height: 1.6;
+	margin-top: 8px;
+	font-size: 12px;
+	color: #b8c7ea;
+	line-height: 1.6;
 }
 
 @media (max-width: 640px) {
-  .game-area {
-    padding: 14px;
-    max-height: calc(100svh - 180px);
-  }
+	.game-area {
+		padding: 14px;
+		max-height: calc(100svh - 180px);
+	}
 
-  .canvas-wrap {
-    width: min(420px, 92vw, 58vh);
-  }
+	.canvas-wrap {
+		width: min(420px, 92vw, 58vh);
+	}
 
-  .controls {
-    flex-direction: column;
-  }
+	.controls {
+		flex-direction: column;
+	}
 
-  .controls button {
-    width: 100%;
-  }
+	.controls button {
+		width: 100%;
+	}
 }

@@ -1,0 +1,153 @@
+:root {
+	--form-accent: #4a7c59;
+	--form-accent-soft: #d9e8dd;
+	--form-error: #c0392b;
+	--form-border: #c7c2ba;
+	--form-muted: #6d6a63;
+	--form-bg: #f4f1ec;
+}
+
+.content__block {
+	align-items: stretch;
+	max-width: 48rem;
+}
+
+.contact-form {
+	background: white;
+	border: 1px solid var(--form-border);
+	border-radius: 20px;
+	box-shadow: 0 24px 40px rgba(25, 21, 16, 0.08);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.form__field {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.form__label {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #1f1b16;
+}
+
+.required {
+	display: inline-block;
+	margin-left: 0.5rem;
+	padding: 0.1rem 0.5rem;
+	border-radius: 999px;
+	background: var(--form-accent-soft);
+	color: #294233;
+	font-size: 0.75rem;
+}
+
+.form__control {
+	border: 1px solid var(--form-border);
+	border-radius: 12px;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	background: #fffdf9;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.form__control:focus {
+	outline: none;
+	border-color: var(--form-accent);
+	box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2);
+}
+
+.form__textarea {
+	resize: vertical;
+	min-height: 8rem;
+}
+
+.form__help {
+	color: var(--form-muted);
+	font-size: 0.95rem;
+}
+
+.form__meta {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.char-count {
+	font-size: 0.95rem;
+	color: var(--form-muted);
+}
+
+.char-count.is-limit {
+	color: var(--form-error);
+	font-weight: 600;
+}
+
+.form__error {
+	color: var(--form-error);
+	font-size: 0.95rem;
+	min-height: 1.2rem;
+}
+
+.file-name {
+	font-size: 0.95rem;
+	color: #2f2b26;
+	background: #f2f0ea;
+	padding: 0.5rem 0.75rem;
+	border-radius: 10px;
+	border: 1px dashed var(--form-border);
+}
+
+.form__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+}
+
+.form__submit {
+	border: none;
+	border-radius: 999px;
+	padding: 0.75rem 2rem;
+	background: var(--form-accent);
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.form__submit:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 20px rgba(74, 124, 89, 0.2);
+}
+
+.form__status {
+	font-size: 0.95rem;
+	color: var(--form-muted);
+}
+
+.form__status.is-success {
+	color: var(--form-accent);
+	font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+	.contact-form {
+		padding: 1.5rem;
+	}
+
+	.form__actions {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.form__submit {
+		width: 100%;
+		text-align: center;
+	}
+}

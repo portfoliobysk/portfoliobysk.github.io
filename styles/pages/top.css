@@ -1,179 +1,184 @@
 @charset "UTF-8";
 /* hero Section styles */
 section.hero__section {
-  padding: 0 1rem 5rem 1rem;
-  max-width: 100%;
-  min-height: 600px;
-  color: white;
-  background-image:
-      url("../../images/mountain.svg"),
-      linear-gradient(deepskyblue, green);
-  background-size:
-      50% auto,
-      cover; 
-  background-repeat: no-repeat;
-  background-position:
-      100% bottom,
-      center;
-  border-radius: 0 0 2rem 2rem;
-  justify-content: end;
-  align-items: flex-start;
+	padding: 0 1rem 5rem 1rem;
+	max-width: 100%;
+	min-height: 600px;
+	color: white;
+	background-image:
+		url('../../images/mountain.svg'), linear-gradient(deepskyblue, green);
+	background-size:
+		50% auto,
+		cover;
+	background-repeat: no-repeat;
+	background-position:
+		100% bottom,
+		center;
+	border-radius: 0 0 2rem 2rem;
+	justify-content: end;
+	align-items: flex-start;
 }
 h2.slogan {
-  margin: 0 0 2rem 5rem;
-  font-size: 6rem;
-  color: white;
-  text-align: left;
-  line-height: 1;
+	margin: 0 0 2rem 5rem;
+	font-size: 6rem;
+	color: white;
+	text-align: left;
+	line-height: 1;
 }
 span.slogan__top {
-  font-size: 6rem;
-  font-weight: bold;
+	font-size: 6rem;
+	font-weight: bold;
 }
 span.slogan__sub {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 p.slogan__explain {
-  margin: 0 0 0 5rem;
+	margin: 0 0 0 5rem;
 }
 
 /* profile Section styles */
 div#profile__img {
-  width: 300px;
-  height: 300px;
-  border-radius: 20rem;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 300px;
+	height: 300px;
+	border-radius: 20rem;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 section.profile__section p {
-  padding: 1.5rem;
-  width: 100%;
-  max-width: 60rem;
+	padding: 1.5rem;
+	width: 100%;
+	max-width: 60rem;
 }
 
 /* skills Section styles */
 section.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 li.html {
-  color: white;
-  background-color: MediumSeaGreen;
+	border: 0;
+	color: white;
+	background-color: MediumSeaGreen;
 }
 li.css {
-  color: white;
-  background-color: Indigo;
+	border: 0;
+	color: white;
+	background-color: Indigo;
 }
 li.js {
-  background-color: yellow;
+	border: 0;
+	background-color: yellow;
 }
 li.ts {
-  color: white;
-  background-color: DodgerBlue;
+	border: 0;
+	color: white;
+	background-color: DodgerBlue;
 }
 li.sql {
-  color: white;
-  background-color: darkred;
+	border: 0;
+	color: white;
+	background-color: darkred;
 }
 li.react {
-  background-color: DeepSkyBlue;
+	border: 0;
+	background-color: DeepSkyBlue;
 }
 
 /* portfolio Section styles */
 section.portfolio {
-  max-width: 90%;
-  background-color: LightBlue;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	max-width: 90%;
+	background-color: LightBlue;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 section.portfolio dl {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
 }
 section.portfolio dt {
-  margin: 2rem;
+	margin: 2rem;
 }
 section.portfolio dd {
-  padding: 2rem;
+	padding: 2rem;
 }
 section.portfolio a {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /* Career Section styles */
 section.career {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 section.career dl {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
 }
 section.career dt {
-  margin: 2rem;
-  font-weight: bold;
+	margin: 2rem;
+	font-weight: bold;
 }
 section.career dd {
-  margin: 2rem;
+	margin: 2rem;
 }
 
 /* Tablet Contents Style */
-@media screen and (max-width:1280px) {
-  h2.slogan {
-    margin: 0 0 2rem 2rem;
-  }
-  span.slogan__top {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  span.slogan__sub {
-    font-size: 3rem;
-  }
-  p.slogan__explain {
-    margin: 0 0 0 2rem;
-  }
+@media screen and (max-width: 1280px) {
+	h2.slogan {
+		margin: 0 0 2rem 2rem;
+	}
+	span.slogan__top {
+		font-size: 4rem;
+		font-weight: bold;
+	}
+	span.slogan__sub {
+		font-size: 3rem;
+	}
+	p.slogan__explain {
+		margin: 0 0 0 2rem;
+	}
 
-  li:hover{
-      pointer-events: none;
-  }
+	li:hover {
+		pointer-events: none;
+	}
 }
 
 /* SmartPhone Contents styles */
-@media screen and (max-width:500px) {
-  h2.slogan {
-    margin: 0 0 2rem 0;
-  }
-  span.slogan__top {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  span.slogan__sub {
-    font-size: 2rem;
-  }
-  p.slogan__explain {
-    margin: 0;
-    font-size: 1rem;
-  }
+@media screen and (max-width: 500px) {
+	h2.slogan {
+		margin: 0 0 2rem 0;
+	}
+	span.slogan__top {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+	span.slogan__sub {
+		font-size: 2rem;
+	}
+	p.slogan__explain {
+		margin: 0;
+		font-size: 1rem;
+	}
 
-  li:hover{
-    pointer-events: none;
-  }
+	li:hover {
+		pointer-events: none;
+	}
 
-  section.portfolio dl {
-    display: flex;
-    flex-direction: column; 
-  }
+	section.portfolio dl {
+		display: flex;
+		flex-direction: column;
+	}
 
-  section.career dl {
-    display: flex;
-    flex-direction: column;
-  }
+	section.career dl {
+		display: flex;
+		flex-direction: column;
+	}
 }

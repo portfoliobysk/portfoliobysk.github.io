@@ -1,57 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="S.K" />
-  <meta name="description" content="HTML/CSS/JavaScriptで作ったインベーダーゲームです。" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="S.K" />
+		<meta
+			name="description"
+			content="HTML/CSS/JavaScriptで作ったインベーダーゲームです。"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="../../styles/base/destyle.css" rel="stylesheet">
-  <link href="../../styles/base/base.css" rel="stylesheet">
-  <link href="../../styles/layout/header.css" rel="stylesheet">
-  <link href="../../styles/layout/footer.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+		<link href="../../styles/base/destyle.css" rel="stylesheet" />
+		<link href="../../styles/base/base.css" rel="stylesheet" />
+		<link href="../../styles/layout/header.css" rel="stylesheet" />
+		<link href="../../styles/layout/footer.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
 
-  <title>Invader Game - S.K's Portfolio</title>
+		<title>Invader Game - S.K's Portfolio</title>
 
-  <script src="../../scripts/header_footer.js"></script>
-</head>
-<body>
-  <header></header>
+		<script src="../../scripts/header_footer.js"></script>
+	</head>
+	<body>
+		<header></header>
 
-  <nav id="breadcrumb"></nav>
+		<nav id="breadcrumb"></nav>
 
-  <main class="game-page">
-    <section class="game-hero">
-      <h2>Invader Game</h2>
-      <p>HTML/CSS/JavaScriptで作ったシンプルなインベーダーゲームです。</p>
-    </section>
+		<main class="game-page">
+			<section class="game-hero">
+				<h2>Invader Game</h2>
+				<p>HTML/CSS/JavaScriptで作ったシンプルなインベーダーゲームです。</p>
+			</section>
 
-    <section class="game-area">
-      <div class="hud">
-        <div>Score: <span id="score">0</span></div>
-        <div>Lives: <span id="lives">3</span></div>
-        <div>Wave: <span id="wave">1</span></div>
-      </div>
+			<section class="game-area">
+				<div class="hud">
+					<div>Score: <span id="score">0</span></div>
+					<div>Lives: <span id="lives">3</span></div>
+					<div>Wave: <span id="wave">1</span></div>
+				</div>
 
-      <div class="canvas-wrap">
-        <canvas id="game" aria-label="Invader game canvas"></canvas>
-        <div class="overlay" id="overlay">Press Enter to Start</div>
-      </div>
+				<div class="canvas-wrap">
+					<canvas id="game" aria-label="Invader game canvas"></canvas>
+					<div class="overlay" id="overlay">Press Enter to Start</div>
+				</div>
 
-      <div class="controls">
-        <button id="startBtn" type="button">Start / Restart</button>
-        <button id="pauseBtn" type="button">Pause</button>
-      </div>
+				<div class="controls">
+					<button id="startBtn" type="button">Start / Restart</button>
+					<button id="pauseBtn" type="button">Pause</button>
+				</div>
 
-      <div class="help">
-        <p>操作: ←/→ または A/D で移動、Space でショット、Enter で開始/リスタート、P で一時停止。<br>スマホはスワイプで移動、タップでショット。</p>
-      </div>
-    </section>
-  </main>
+				<div class="help">
+					<p>
+						操作: ←/→ または A/D で移動、Space でショット、Enter
+						で開始/リスタート、P で一時停止。<br />スマホはスワイプで移動、タップでショット。
+					</p>
+				</div>
+			</section>
+		</main>
 
-  <footer></footer>
+		<footer></footer>
 
-  <script type="module" src="main.js"></script>
-</body>
+		<script type="module" src="main.js"></script>
+	</body>
 </html>

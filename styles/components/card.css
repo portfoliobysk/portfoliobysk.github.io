@@ -1,26 +1,33 @@
 /* Card Component Styles */
-ul.card {
-    width: 100%;
-    max-width: 60rem;
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none;
+ul.cards {
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	scrollbar-width: none;
+	user-select: none;
+	cursor: grab;
+}
+ul.cards.is-dragging {
+	cursor: grabbing;
 }
 li.card {
-    margin: 1rem;
-    padding: 1rem;
-    width: 10rem;
-    min-width: 10rem;
-    height: 10rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 1rem;
-    box-shadow: 1rem 1rem 0.5rem lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	margin: 1rem;
+	padding: 1rem;
+	width: 20rem;
+	min-width: 20rem;
+	height: 20rem;
+	border-radius: 1rem;
+	border: 1px solid dimgray;
+	font-size: 1.5rem;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 li.card:hover {
-    transform: scale(1.1);
-    transition: all .5s ease-out 0.1s;
+	transform: scale(1.05);
+	transition: all 0.5s ease-out 0.1s;
 }
