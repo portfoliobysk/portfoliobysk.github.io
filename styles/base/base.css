@@ -57,12 +57,15 @@ h3 {
 h4 {
 	margin: 2rem 0;
 	font-size: 2rem;
+	text-align: center;
 }
 
 /* List styles */
 ul {
 	list-style: square;
 	padding: 2rem;
+	display: flex;
+	flex-direction: column;
 }
 ol {
 	list-style-type: decimal;

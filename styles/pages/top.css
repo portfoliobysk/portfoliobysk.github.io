@@ -1,21 +1,17 @@
 @charset "UTF-8";
-/* hero Section styles */
+/* hero Section */
 section.hero__section {
 	padding: 0 1rem 5rem 1rem;
 	max-width: 100%;
-	min-height: 600px;
+	min-height: 100svh;
 	color: white;
-	background-image:
-		url('../../images/mountain.svg'), linear-gradient(deepskyblue, green);
-	background-size:
-		50% auto,
-		cover;
+	background-image: url('../../images/mountain.svg'),
+		linear-gradient(deepskyblue, green);
+	background-size: clamp(160px, 100vw, 800px) auto, cover;
 	background-repeat: no-repeat;
-	background-position:
-		100% bottom,
-		center;
+	background-position: 100% bottom, center;
 	border-radius: 0 0 2rem 2rem;
-	justify-content: end;
+	justify-content: center;
 	align-items: flex-start;
 }
 h2.slogan {
@@ -36,8 +32,8 @@ p.slogan__explain {
 	margin: 0 0 0 5rem;
 }
 
-/* profile Section styles */
-div#profile__img {
+/* About Me Section */
+div#AboutMe__img {
 	width: 300px;
 	height: 300px;
 	border-radius: 20rem;
@@ -46,17 +42,22 @@ div#profile__img {
 	justify-content: center;
 	align-items: center;
 }
-section.profile__section p {
+section.AboutMe__section p {
 	padding: 1.5rem;
 	width: 100%;
 	max-width: 60rem;
 }
 
-/* skills Section styles */
-section.skills {
+/* skills Section */
+section.skills__section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+/* lang area */
+section.lang__area h4 {
+	align-self: center;
 }
 li.html {
 	border: 0;
@@ -87,7 +88,21 @@ li.react {
 	background-color: DeepSkyBlue;
 }
 
-/* portfolio Section styles */
+/* Dev learn area */
+dt.title {
+	border-bottom: 1px solid dimgray;
+	font-weight: normal;
+}
+dd.item {
+	padding: 1rem 0 1rem 0;
+	font-size: 2rem;
+	font-weight: bold;
+}
+dd.explain {
+	margin: 0 0 2rem 0;
+}
+
+/* portfolio Section */
 section.portfolio {
 	max-width: 90%;
 	background-color: LightBlue;
@@ -111,7 +126,7 @@ section.portfolio a {
 	font-weight: bold;
 }
 
-/* Career Section styles */
+/* Career Section */
 section.career {
 	display: flex;
 	flex-direction: column;
@@ -130,7 +145,7 @@ section.career dd {
 	margin: 2rem;
 }
 
-/* Tablet Contents Style */
+/* Tablet Contents */
 @media screen and (max-width: 1280px) {
 	h2.slogan {
 		margin: 0 0 2rem 2rem;
@@ -151,7 +166,7 @@ section.career dd {
 	}
 }
 
-/* SmartPhone Contents styles */
+/* SmartPhone Contents */
 @media screen and (max-width: 500px) {
 	h2.slogan {
 		margin: 0 0 2rem 0;

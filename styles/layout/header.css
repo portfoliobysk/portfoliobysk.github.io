@@ -2,7 +2,7 @@
 /* headder styles */
 header {
 	padding: 0 2vw;
-	width: 100%;
+	width: 100svw;
 	min-height: var(--header-height);
 	border-radius: 0 0 2rem 2rem;
 	background-color: white;
@@ -122,7 +122,7 @@ nav#breadcrumb ol li {
 	}
 
 	header img[src$='.svg'] {
-		transform: scale(0.8);
+		transform: scale(0.7);
 	}
 
 	/*
@@ -216,5 +216,9 @@ nav#breadcrumb ol li {
 		background-color: inherit;
 		color: inherit;
 		font-weight: inherit;
+	}
+	svg.icon {
+		margin: 0.5rem 0 0.5rem 0;
+		transform: scale(1.5);
 	}
 }
