@@ -20,14 +20,23 @@ li.card {
 	height: 20rem;
 	border-radius: 1rem;
 	border: 1px solid dimgray;
-	font-size: 1.5rem;
+	text-align: center;
+	font-size: 3rem;
 	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 li.card:hover {
 	transform: scale(1.05);
 	transition: all 0.5s ease-out 0.1s;
+}
+
+/* Tablet Contents Style */
+@media screen and (max-width: 1280px) {
+}
+
+/* SmartPhone Image styles */
+@media screen and (max-width: 500px) {
+	li.card {
+		width: 15rem;
+		min-width: 15rem;
+	}
 }

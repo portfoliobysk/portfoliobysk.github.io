@@ -21,7 +21,7 @@ const headerContent = `
     <div class="overlay"></div>
     <nav>
       <div id="header__nav__contents">
-        <a href="/index.html#profile__link">Profile</a>
+        <a href="/index.html#AboutMe__link">About Me</a>
         <a href="/index.html#skills__link">Skill's</a>
         <a href="/index.html#portfolio__link">Portfolio</a>
         <a href="/index.html#career__link">Career</a>
@@ -74,10 +74,10 @@ const breadcrumbContent = () => {
 const footerContent = `
   <div id="footer__copy">
     <a class="logo" href="/"><img src="https://portfoliobysk.github.io/images/logo.svg" alt="S.K's Portfolio Logo"></a>
-    <small>&#169; 2025 S.K</small>
+    <small>&#169; 2025-2026 S.K</small>
   </div>
   <div id="footer__nav__contents">
-    <a href="/index.html#profile__link">Profile</a>
+    <a href="/index.html#AboutMe__link">About Me</a>
     <a href="/index.html#skills__link">Skill's</a>
     <a href="/index.html#portfolio__link">Portfolio</a>
     <a href="/index.html#career__link">Career</a>
